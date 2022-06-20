@@ -1,0 +1,11 @@
+﻿Mods: {
+	Overthrown: {
+		Currencies: {
+			VoidCurrency: Void Crystals
+		}
+
+		DamageClassName: {
+			Void: Void damage
+		}
+	}
+}

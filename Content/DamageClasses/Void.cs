@@ -12,7 +12,13 @@ namespace Overthrown.Content.DamageClasses
             if (damageClass == DamageClass.Generic)
                 return StatInheritanceData.Full;
 
-            return new StatInheritanceData.None;
+            return new StatInheritanceData(
+                damageInheritance: 0f,
+                critChanceInheritance: 0f,
+                attackSpeedInheritance: 0f,
+                armorPenInheritance: 0f,
+                knockbackInheritance: 0f
+            );
         }
 
         public override bool GetEffectInheritance(DamageClass damageClass)
@@ -27,9 +33,9 @@ namespace Overthrown.Content.DamageClasses
         
         public override void SetDefaultStats(Player player)
         {
-            player.GetCritChanc<Void>() += 5;
+            player.GetCritChance<Void>() += 5;
             player.GetArmorPenetration<Void>() += 2.5f;
-            player.GetDamage<Void>() += 20;
+            player.GetDamage<Void>() += 2;
         }
 
         public override bool UseStandardCritCalcs => true;

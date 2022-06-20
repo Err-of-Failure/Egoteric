@@ -11,7 +11,7 @@ namespace Overthrown
 
 		public override void Load()
 		{
-			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<Content.Items.VoidCrystal>(), 999L, "Mods.Overthrown.Content.Currencies.VoidCurrency"));
+			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<Content.Items.VoidCrystal>(), 999L, "Mods.Overthrown.Currencies.VoidCurrency"));
 		}
 
         public override void Unload()
