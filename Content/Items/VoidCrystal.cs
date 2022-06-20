@@ -3,20 +3,24 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace Overthrown.Items
+namespace Overthrown.Content.Items
 {
-	public class VoidCrystal : ModItem
+	internal class VoidCrystal : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Crystal"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			DisplayName.SetDefault("Void Crystal");
 			Tooltip.SetDefault("Beta Resource Item");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 		}
 
 		public override void SetDefaults()
 		{
+			Item.width = 32;
+			Item.height = 32;
 
+			Item.buyPrice(gold: 1, silver: 20);
+			Item.maxStack = 999;
 		}
 	}
 }

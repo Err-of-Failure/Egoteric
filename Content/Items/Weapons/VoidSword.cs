@@ -20,23 +20,27 @@ namespace Overthrown.Content.Items.Weapons
             Item.height = 40;
 
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.useTime = 20;
-            Item.useAnimation = 20;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
             Item.autoReuse = true;
 
             Item.DamageType = ModContent.GetInstance<Void>();
-            Item.damage = 20;
-            Item.knockBack = 3.5f;
-            Item.crit = 25;
+            Item.damage = 150;
+            Item.knockBack = 4.75f;
+            Item.crit = 55;
 
-            Item.value = Item.buyPrice(platinum: 20);
+            Item.value = Item.buyPrice(platinum: 10);
             Item.rare = ItemRarityID.Expert;
 
             Item.UseSound = SoundID.Item1;
         }
         public override void AddRecipes()
         {
-            
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<VoidCrystal>(), 10)
+                .AddRecipeGroup(RecipeGroupID.IronBar, 4)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

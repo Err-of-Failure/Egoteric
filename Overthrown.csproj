@@ -26,6 +26,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Items\Armor\Vanity\" />
-    <Folder Include="Content\Currencies\" />
   </ItemGroup>
 </Project>
