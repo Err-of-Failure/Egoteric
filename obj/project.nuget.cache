@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kvyCTX3EhKXbm7AqZbPaXb1U/AsGBHy07ICYlTgdOcqkNpdbWCbzFJkgo1M/rl7BDV9sbUdZMzet+B3OtStdkQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\treve\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\Overthrown\\Overthrown.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\treve\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
