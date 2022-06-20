@@ -33,9 +33,9 @@ namespace Overthrown.Content.DamageClasses
         
         public override void SetDefaultStats(Player player)
         {
-            player.GetCritChance<Void>() += 5;
-            player.GetArmorPenetration<Void>() += 2.5f;
-            player.GetDamage<Void>() += 2;
+            player.GetCritChance<Void>() += 5f;
+            player.GetArmorPenetration<Void>() += 1.5f;
+            player.GetDamage<Void>() += 0.5f;
         }
 
         public override bool UseStandardCritCalcs => true;
