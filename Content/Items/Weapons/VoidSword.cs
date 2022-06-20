@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Overthrown.Content.DamageClasses;
+using Overthrown.Content.Rarities;
 
 namespace Overthrown.Content.Items.Weapons
 {
@@ -49,7 +50,7 @@ namespace Overthrown.Content.Items.Weapons
             Item.crit = 55;
 
             Item.value = Item.buyPrice(platinum: 10);
-            Item.rare = ItemRarityID.Expert;
+            Item.rare = ModContent.RarityType<VoidHigherRarity>();
 
             Item.UseSound = SoundID.Item1;
         }
