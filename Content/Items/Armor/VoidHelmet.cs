@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Overthrown.Content.DamageClasses;
+using Overthrown.Content.Rarities;
 
 namespace Overthrown.Content.Items.Armor
 {
@@ -39,7 +40,7 @@ namespace Overthrown.Content.Items.Armor
             Item.width = 18; 
             Item.height = 18; 
             Item.value = Item.sellPrice(gold: 1); 
-            Item.rare = ItemRarityID.Expert; 
+            Item.rare = ModContent.RarityType<VoidHigherRarity>();
             Item.defense = 5; 
         }
 
