@@ -14,6 +14,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Textures\NewFile1.txt" />
+    <None Remove="Content\Items\Armor\Vanity\PyxlBody.png" />
+    <None Remove="Content\Items\Armor\Vanity\PyxlShirt_Bosy.png" />
+    <None Remove="Content\Items\Armor\Vanity\TorchBody.png" />
+    <None Remove="Content\Items\Armor\Vanity\TorchBody_Body.png" />
+    <None Remove="Content\Items\Armor\Vanity\TorchHead.png" />
+    <None Remove="Content\Items\Armor\Vanity\TorchLegs.png" />
+    <None Remove="Content\Items\Armor\Vanity\TorchLegs_Legs.png" />
     <None Remove="Content\Items\DebugItem" />
     <None Remove="Content\Items\DebugItem.png" />
     <None Remove="Content\Items\Default.png" />
@@ -23,8 +30,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\Items\Armor\Vanity\" />
   </ItemGroup>
 </Project>
