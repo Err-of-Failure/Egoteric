@@ -22,7 +22,6 @@
     <None Remove="Content\Items\Armor\Vanity\PyxlShirt_Bosy.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchBody.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchBody_Body.png" />
-    <None Remove="Content\Items\Armor\Vanity\TorchHead.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchLegs.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchLegs_Legs.png" />
     <None Remove="Content\Items\DebugItem" />
