@@ -18,7 +18,7 @@ namespace Overthrown.Content.Items.Weapons
             Tooltip.SetDefault("Beta Item");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
-
+        /*
         public override bool PreDrawTooltipLine(DrawableTooltipLine line, ref int yOffset)
         {
             if (line.Mod == "Terraria" && line.Name == "ItemName")
@@ -33,11 +33,12 @@ namespace Overthrown.Content.Items.Weapons
             }
             return true;
         }
-
+        */
         public override void SetDefaults()
         {
             Item.width = 40;
             Item.height = 40;
+            Item.scale = 1.5f;
 
             Item.useStyle = ItemUseStyleID.Swing;
             Item.useTime = 15;

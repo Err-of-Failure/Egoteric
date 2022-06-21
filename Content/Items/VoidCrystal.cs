@@ -17,7 +17,7 @@ namespace Overthrown.Content.Items
 			Tooltip.SetDefault("Beta Resource Item");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 		}
-
+		/*
 		public override bool PreDrawTooltipLine(DrawableTooltipLine line, ref int yOffset)
 		{
 			if (line.Mod == "Terraria" && line.Name == "ItemName")
@@ -32,7 +32,7 @@ namespace Overthrown.Content.Items
 			}
 			return true;
 		}
-
+		*/
 		public override void SetDefaults()
 		{
 			Item.width = 32;
