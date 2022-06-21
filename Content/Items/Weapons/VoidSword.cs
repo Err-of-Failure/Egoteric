@@ -51,7 +51,7 @@ namespace Overthrown.Content.Items.Weapons
             Item.crit = 55;
 
             Item.value = Item.buyPrice(platinum: 10);
-            Item.rare = ModContent.RarityType<VoidHigherRarity>();
+            Item.rare = ModContent.RarityType<PyxlHigherRarity>();
 
             Item.UseSound = SoundID.Item1;
         }

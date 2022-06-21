@@ -2,13 +2,13 @@
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Overthrown.Content.Rarities;
 
 namespace Overthrown.Content.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Body)]
     public class PyxlShirt : ModItem
     {
-		public override string Texture => "Overthrown/Assets/Textures/DevItem";
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Pyxl's Shirt");
@@ -22,7 +22,7 @@ namespace Overthrown.Content.Items.Armor.Vanity
 			Item.height = 18;
 
 			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ModContent.RarityType<PyxlHigherRarity>();
 			Item.vanity = true;
 			Item.maxStack = 1;
         }

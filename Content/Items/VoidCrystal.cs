@@ -41,7 +41,7 @@ namespace Overthrown.Content.Items
 			Item.buyPrice(gold: 1, silver: 20);
 			Item.maxStack = 999;
 
-			Item.rare = ModContent.RarityType<VoidRarity>();
+			Item.rare = ModContent.RarityType<PyxlBaseRarity>();
 		}
 	}
 }

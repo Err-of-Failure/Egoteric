@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Overthrown.Content.Rarities
 {
-    public class VoidRarity : ModRarity
+    public class PyxlBaseRarity : ModRarity
     {
         public override Color RarityColor => new Color(91, 0, 140);
 
@@ -12,7 +12,7 @@ namespace Overthrown.Content.Rarities
         {
             if (offset > 0)
             {
-                return ModContent.RarityType<VoidHigherRarity>();
+                return ModContent.RarityType<PyxlHigherRarity>();
             }
 
             return Type;

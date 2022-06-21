@@ -22,6 +22,9 @@ she can command anyone to stop, which they are completely unable to disobey.
 
 Claire's only purpose is to dismantle others' faith and belief in how the world works.
 
+
+##Weapons and Styles
+
 #Torch - Tends to be the one who would actually think about helping the others before his self. Likes helping others no matter how he is hurt.
 Like critters, tends to play arround with them, however, he does like to mess with fire. Practically a Summoner class with a hint of Magic. Summoner/Magic.
 
@@ -38,7 +41,10 @@ Torch Group Items:
 {
 	Torch:
 	{
-		
+		Lil' Torch
+		Equipable
+		Summons a mini Torch
+		"He likes to sing."
 	}
 	Pyre:
 	{
@@ -73,15 +79,46 @@ She can also merge with one of them to inheirit their traits and combat styles. 
 
 Merricide group items -
 
-Pyxl's Solid Light Projection Gloves were a concept design for a hologram keyboard for music. After development, the keyboard's not her preferred instrument,
-but the gloves are versatile enough to still be used.
+	{Solid Light Projection Gloves
+	x damage
+	Fast/Fast/Average/Very fast speed
+	Strong/Very Strong/Weak/Very weak knockback
+	(Interact) to swap between a light sword, Yoyo, Whip, and construct summon
+	"I use all of them, I swear!"}
 
-Vidia's Bass is inspired by Marceline's but way more dark and anarchistic.
+	Pyxl's Solid Light Projection Gloves were a concept design for a hologram keyboard for music. After character development, the keyboard's
+	not her preferred instrument, but the gloves are versatile enough to still be used.
 
-Rubiks Cube. Various kinds and powers. That's it. Patterns: Checkerboard, dots, scrambled, solved, superflip
+	{Dark Bass
+	x magic damage
+	Slow speed
+	Insane knockback
+	(Use Item) to bash enemies around you
+	(Interact) to hit a riff and push back enemies
+	"Any half-vampire would be proud."}
 
-Pet Roserade, I want
-(Copyright can suck my god damn ass)
+	Vidia's Bass is inspired by Marceline's but way more dark and anarchistic.
+
+	{Rip and Tear
+	x melee damage
+	Very fast speed
+	Insane knockback
+	Turn into a hellhound to destroy your enemies
+	"You're the only thing they fear."}
+
+Other items relating to Marri
+
+	{Puzzle Cube
+	x throwing damage
+	Average speed
+	Average knockback
+	(Interact) to cycle between states, dealing various status effects
+	/solve - ichor, scramble - confuse, dots - cursed, checkerboard - venom or poison, superflip - fire/
+	/multiple tiers to play on different cubes - Rubik's, Dollar Store, Gan, etc./}
+
+	{Pet Shiny Roserade
+	Equipable
+	Summons a shiny Roserade}
 
 The Merricide group are a lot more combat oriented/more thought out with attacks, so Torch's group will be set up as NPCs in generated structures
 in the sky, seas, and hell respectively. They'll initiate battles against the Merricide Negatives (Gamma, Dark, Master and Claire) or give items

@@ -11,10 +11,14 @@
     <Compile Remove="Content\Items\Armor\Void Helmet.cs" />
     <Compile Remove="Content\Items\DebugItem.cs" />
     <Compile Remove="Content\Items\Weapons\Whatever.cs" />
+    <Compile Remove="Content\Rarities\VoidHigherRarity.cs" />
+    <Compile Remove="Content\Rarities\VoidRarity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Textures\NewFile1.txt" />
+    <None Remove="Content\Items\Armor\Vanity\DevItem.png" />
     <None Remove="Content\Items\Armor\Vanity\PyxlBody.png" />
+    <None Remove="Content\Items\Armor\Vanity\PyxlShirt" />
     <None Remove="Content\Items\Armor\Vanity\PyxlShirt_Bosy.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchBody.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchBody_Body.png" />
@@ -27,8 +31,12 @@
     <None Remove="Content\Items\VoidCrystal" />
     <None Remove="Content\Items\VoidCrystal.ong" />
     <None Remove="Content\Items\Weapons\DebugItem.png" />
+    <None Remove="Content\Rarities\PyxlBaseRarity" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Textures\" />
   </ItemGroup>
 </Project>
