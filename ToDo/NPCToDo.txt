@@ -1,0 +1,28 @@
+﻿Torch -
+[
+Spawn: Pre-hardmode, After killing King Slime and Eye of Cthulhu
+(Easy bosses, mainly to get him early)
+
+]
+
+Pyre - 
+[
+Spawn: Pre-hardmode, After Torch arrives, and Eater of Worlds/Brain of Cthulhu is killed
+(Doesn't require Torch to be alive at the time (Which I know is kinda grusome, he just needs him to have spawned, and he needs the World's evil boss killed.)
+
+]
+
+Kawatta - 
+[
+Spawn: Hardmode, Only while Torch is alive, and after Wall of Flesh and Queen Bee are killed. 
+(I know this sounds like weird conditions, but this ensures that they have to keep another NPC alive and have two bosses killed, and yes, 
+I am aware that Wall of Flesh puts the world into hardmode, but I am still making it a condition, as a just in case if someone makes a mod that skips the killing process)
+
+]
+
+Kinder -
+[
+Spawn: Hardmode, after Duke Fishron is killed, Kawatta and Pyre are alive, and there is a house near the Ocean.
+(I want to see if I can make it conditional for a house near the sea. Probably not, but it'd be nice.)
+
+]

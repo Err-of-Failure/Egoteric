@@ -6,7 +6,7 @@ namespace Overthrown.Content.Rarities
 {
     public class PyxlHigherRarity : ModRarity
     { 
-        public override Color RarityColor => new Color((byte)(Main.DiscoR / 1.5f), 0, (byte)(Main.DiscoR / 1.5f));
+        public override Color RarityColor => new Color((byte)(Main.DiscoR), 0, (byte)(Main.DiscoR));
 
         public override int GetPrefixedRarity(int offset, float valueMulti)
         {
