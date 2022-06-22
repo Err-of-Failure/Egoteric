@@ -6,22 +6,23 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Linq;
 
 namespace Overthrown.Common.Players
 {
     public class SpawnInventory : ModPlayer
     {
-		private Player player;
+		
 		public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
 		{
-			if (player.name == "Pyxl")
+			if (Player.name == "Pyxl")
 			{
 				return new[] 
 				{
 					new Item(ModContent.ItemType<PyxlShirt>())
 				};
 			}
-			if (player.name == "Torch")
+			if (Player.name == "Torch")
             {
 				return new[]
 				{
@@ -31,7 +32,7 @@ namespace Overthrown.Common.Players
 				};
             }
 
-			return null;
+			return Enumerable.Empty<Item>();
 		}
 
 	}
