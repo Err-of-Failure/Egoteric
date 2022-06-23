@@ -32,4 +32,4 @@ strait up replacing the positives during hardmode until "beaten". Proper houses 
 walls, so we can use them as location spawns, and pairing up roommates could be fun. My only concern is stealing spotlight, since I know my characters'
 strengths as villains, but I don't know how to handle and integrate yours. I NEED LORE DAMMIT
 
-Well then, I guess I should take like a 2 day break. I think I need it anyway, parents kinda making me depressed once again. I'll get to work on the lore. - Torch
+Well then, I guess I should take like a 2 day break from coding. I think I need it anyway, parents kinda making me depressed once again. I'll get to work on the lore. - Torch
