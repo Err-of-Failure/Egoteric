@@ -12,7 +12,6 @@ namespace Overthrown.Common.Players
 {
     public class SpawnInventory : ModPlayer
     {
-		
 		public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
 		{
 			if (Player.name == "Pyxl")

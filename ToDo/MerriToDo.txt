@@ -1,0 +1,5 @@
+﻿1. Fix Torch's Scarf
+2. Make Spritesheets for NPCs, First Priority (due to testing reasons) Torch NPC
+Note: NPC Sprites need to face left, a Head icon, and an Alternate Party sprite Sheet
+
+3.
