@@ -106,6 +106,37 @@ Merricide group items -
 	Turn into a hellhound to destroy your enemies
 	"You're the only thing they fear."}
 
+	{Memento of Abandonment
+	Equipable
+	Increases your summoning capabilities substantially
+	Extremely limits the use of other classes
+	"If I'm entertaining enough, they won't want to leave... right?"
+	Master}
+
+	{Memento of Betrayal
+	Equipable
+	Increases your melee capabilities substantially
+	Extremely limits the use of other classes
+	"Not one person was on my side..."
+	Master}
+
+	{Memento of Isolation
+	Equipable
+	Increases your ranged and throwing capabilities substantially
+	Extremely limits the use of other classes
+	"After all, not a single person would care..."
+	Master}
+
+	{Memento of Death
+	Equipable
+	Increases your magic capabilities substantially
+	Extremely limits the use of other classes
+	"Just one word echoed... Why..."
+	Master}
+
+	I've been on a psychology kick lately after my therapist accidently had me relive the "water incident". Don't want to start making things too
+	depressing, but all the Negatives are EXTREMELY connected to my past and their villainous tendencies make them WAY too effective.
+
 Other items relating to Marri
 
 	{Puzzle Cube

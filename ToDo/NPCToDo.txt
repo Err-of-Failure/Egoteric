@@ -26,3 +26,8 @@ Spawn: Hardmode, after Duke Fishron is killed, Kawatta and Pyre are alive, and t
 (I want to see if I can make it conditional for a house near the sea. Probably not, but it'd be nice.)
 
 ]
+
+I had the idea for my positives and negatives to be npcs as well, with fights being voluntarily triggered (cause theyre NOT gonna be fair) and the negatives
+strait up replacing the positives during hardmode until "beaten". Proper houses as procedure generated locations can be circumvented by subtracting valid
+walls, so we can use them as location spawns, and pairing up roommates could be fun. My only concern is stealing spotlight, since I know my characters'
+strengths as villains, but I don't know how to handle and integrate yours. I NEED LORE DAMMIT

@@ -18,7 +18,10 @@
     <None Remove="Assets\Textures\NewFile1.txt" />
     <None Remove="Content\Items\Armor\Vanity\DevItem.png" />
     <None Remove="Content\Items\Armor\Vanity\PyxlBody.png" />
+    <None Remove="Content\Items\Armor\Vanity\PyxlHeadIcon.png" />
+    <None Remove="Content\Items\Armor\Vanity\PyxlLegs.png" />
     <None Remove="Content\Items\Armor\Vanity\PyxlShirt" />
+    <None Remove="Content\Items\Armor\Vanity\PyxlShirtIcon.png" />
     <None Remove="Content\Items\Armor\Vanity\PyxlShirt_Bosy.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchBody.png" />
     <None Remove="Content\Items\Armor\Vanity\TorchBody_Body.png" />
