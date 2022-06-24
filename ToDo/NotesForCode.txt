@@ -1,0 +1,8 @@
+﻿NPC.downedBoss1 is the Eye of Cthulhu
+
+NPC.downedBoss2 is Eater of Worlds and Brain of Cthulhu, use WorldGen.crimson (Brain) or !WorldGen.crimson (Eater) to differentiate between the two
+Ex. if (NPC.downedBoss2 && WorldGen.crimson) - Brain
+
+NPC.downedBoss3 is Skeletron
+
+Only typing these down because there are three unlabled NPC downed bosses (Thank you bosses as NPCs for this wonderful knowledge)
