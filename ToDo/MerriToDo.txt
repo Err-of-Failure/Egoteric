@@ -2,4 +2,6 @@
 2. Make Spritesheets for NPCs, First Priority (due to testing reasons) Torch NPC
 Note: NPC Sprites need to face left, a Head icon, and an Alternate Party sprite Sheet
 
-3.
+3. Go into Localization/en-US.hjson and add dialogue for your NPC's
+TownNPCMood is dependant on the Happiness button in an NPC's menu
+In Dialogue, The actual dialogue things don't matter for the variable (ex. TalkALot or CommonDialogue) as long as there is dialogue after the variable
