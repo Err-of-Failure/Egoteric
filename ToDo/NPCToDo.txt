@@ -7,8 +7,8 @@ Spawn: Pre-hardmode, After killing King Slime and Eye of Cthulhu
 
 Pyre - 
 [
-Spawn: Pre-hardmode, After Torch arrives, and Eater of Worlds/Brain of Cthulhu is killed
-(Doesn't require Torch to be alive at the time (Which I know is kinda grusome, he just needs him to have spawned, and he needs the World's evil boss killed.)
+Spawn: Pre-hardmode, While Torch is alive, and Eater of Worlds/Brain of Cthulhu and Skeletron is killed
+(Torch needs to be alive, and the bosses defeated)
 
 ]
 
