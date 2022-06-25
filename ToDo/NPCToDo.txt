@@ -1,29 +1,25 @@
 ﻿Torch -
 [
-Spawn: Pre-hardmode, After killing King Slime and Eye of Cthulhu
-(Easy bosses, mainly to get him early)
+Spawn: Pre-hardmode, After killing King Slime, Eye of Cthulhu, Eater of Worlds/Brain of Cthulhu and Skeletron
 
 ]
 
 Pyre - 
 [
-Spawn: Pre-hardmode, While Torch is alive, and Eater of Worlds/Brain of Cthulhu and Skeletron is killed
-(Torch needs to be alive, and the bosses defeated)
+Spawn: Pre-hardmode, While Torch is alive, Wall of Flesh, Queen Bee and Plantera is killed
 
 ]
 
 Kawatta - 
 [
-Spawn: Hardmode, Only while Torch is alive, and after Wall of Flesh and Queen Bee are killed. 
-(I know this sounds like weird conditions, but this ensures that they have to keep another NPC alive and have two bosses killed, and yes, 
-I am aware that Wall of Flesh puts the world into hardmode, but I am still making it a condition, as a just in case if someone makes a mod that skips the killing process)
+Spawn: Hardmode, Torch and Pyre is alive, and after the Mechanical Bosses are killed. 
 
 ]
 
 Kinder -
 [
-Spawn: Hardmode, after Duke Fishron is killed, Kawatta and Pyre are alive, and there is a house near the Ocean.
-(I want to see if I can make it conditional for a house near the sea. Probably not, but it'd be nice.)
+Spawn: Hardmode, Torch, Pyre, and Kawatta are alive and Queen Slime, Empress of Light and Duke Fishron are killed
+(To make it worse, I could add a conditional where a player has to be holding a Terraprisma as well to signify that they fought EoL in the daytime.)
 
 ]
 
@@ -41,3 +37,5 @@ bit of an origin for my characters and an origin of how they met. Also, one key 
 pure sea-dragon due to the Merfolk genes inside him. So, he can swap out his tail for legs. A perk of being a Merfolk hybrid is that he can't drown and (based on my
 headcannon) also has the power to enchant objects. I'm not saying this to add like a minecraft enchant thing or as a reforge replacement, just saying that he could deal
 with some accessories in his shop or whatever.
+
+MERRICIDE! Feel free to change NPC spawn conditions on my characters (Not the "NPCs alive" part thought), I kinda just bullshit tossed them out there, so they are more than likely going to be changed
