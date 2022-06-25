@@ -11,7 +11,7 @@ using Terraria.GameContent;
 using ReLogic.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Overthrown.Content.NPCs
+namespace Overthrown.Content.NPCs.TownNPCs
 {
     [AutoloadHead]
     public class Torch : ModNPC

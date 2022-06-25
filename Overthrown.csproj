@@ -40,5 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Textures\" />
+    <Folder Include="Content\NPCs\Enemies\" />
   </ItemGroup>
 </Project>

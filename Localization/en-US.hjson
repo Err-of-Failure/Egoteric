@@ -31,7 +31,7 @@
 				LikeBiome: "{BiomeName} is a very nice place to be in."
 				LoveBiome: "I love {BiomeName}."
 				DislikeBiome: "I don't like it in {BiomeName}, it's distracting"
-				HateBiome: "Its kind of hard to practice coding while being attacked by monsters in {BiomeName}."
+				HateBiome: "Its kind of hard to stay nice while being attacked by monsters in {BiomeName}."
 				LikeNPC: "I enjoy talking to {NPCName}, they seem nice."
 				LoveNPC: "Do you think {NPCName} would like to hang out sometime?"
 				DislikeNPC: "{NPCName} is kind of annoying, I don't want to be next to them."
