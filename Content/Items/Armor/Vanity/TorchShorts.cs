@@ -12,7 +12,7 @@ namespace Overthrown.Content.Items.Armor.Vanity
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Torch's Shorts");
-			Tooltip.SetDefault("These just look like jean shorts. Jorts?");
+			Tooltip.SetDefault("Jorts are totally in style!");
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}

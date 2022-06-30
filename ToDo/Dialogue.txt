@@ -1,0 +1,36 @@
+﻿{0} is used when a target variable is asked upon, e.g., the guides name. (If you want a specific thing to call upon, let me know so I can ensure that I code it in.)
+
+Actual Dialogue:
+Can have any Identifier for the dialogue itself, ex. StandardDialogue, DipshitDialogue, MagicManDialogue, but it's still best to label it based on what it is for
+{
+	Torch:
+		PartyGirlDialogue: I enjoy the parties that {0} throws. Brings me some sort of happiness.
+		StandardDialogue1: I have a sound I like making. Weh!
+		StandardDialogue2: Dang, I'm kind of bored just walking around a house. What if we went on an adventure?
+		StandardDialogue3: Ya'know, sometimes, I wonder what is going on inside of {0}'s head. I mean, he has to go crazy trying to remember EVERY recipe right?
+		CommonDialogue: Hey, how's it going? I feel like going for a walk later.
+		RareDialogue: You know, I often wonder how the others are doing, I mean, sometimes we miss our original homes.
+		TalkALot: Jeez, I know I am talkative but you don't have to talk to me this much!
+	Example:
+		ExampleDialogue: Hello, I am me
+}
+
+TownNPCMood:
+MUST be named what they are now, no more can be added or removed
+{
+	Torch: 
+			Content: I feel happy right now, wanna chat?
+			NoHome: Can I have a house? I don't like spending my nights sleeping out here.
+			LoveSpace: There is so much room to do my own stuff here!
+			FarFromHome: I want to go home.
+			DislikeCrowded: It's starting to feel very crampt here.
+			HateCrowded: THERE ARE TOO MANY PEOPLE HERE!
+			LikeBiome: "{BiomeName} is a very nice place to be in."
+			LoveBiome: "I love {BiomeName}."
+			DislikeBiome: "I don't like it in {BiomeName}, it's distracting"
+			HateBiome: "Its kind of hard to stay nice while being attacked by monsters in {BiomeName}."
+			LikeNPC: "I enjoy talking to {NPCName}, they seem nice."
+			LoveNPC: "Do you think {NPCName} would like to hang out sometime?"
+			DislikeNPC: "{NPCName} is kind of annoying, I don't want to be next to them."
+			HateNPC: "I don't know why, but I genuienly hate {NPCName}. Couldn't give you a reason, I just hate them"
+}

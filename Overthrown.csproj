@@ -16,6 +16,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Textures\NewFile1.txt" />
+    <None Remove="Content\Items\Accessories\Abando" />
+    <None Remove="Content\Items\Accessories\MementoOfAbandonment.png" />
+    <None Remove="Content\Items\Accessories\MementoOfBetrayal.png" />
+    <None Remove="Content\Items\Accessories\MementoOfDeath.png" />
+    <None Remove="Content\Items\Accessories\MementoOfIsolation.png" />
     <None Remove="Content\Items\Armor\Vanity\DevItem.png" />
     <None Remove="Content\Items\Armor\Vanity\PyxlBody.png" />
     <None Remove="Content\Items\Armor\Vanity\PyxlHeadIcon.png" />
@@ -34,6 +39,9 @@
     <None Remove="Content\Items\VoidCrystal.ong" />
     <None Remove="Content\Items\Weapons\DebugItem.png" />
     <None Remove="Content\Rarities\PyxlBaseRarity" />
+    <None Remove="ToDo\NewFile1.txt" />
+    <None Remove="ToDo\The Archives\OC Template - Copy %287%29.txt" />
+    <None Remove="ToDo\The Archives\tROCH" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />

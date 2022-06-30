@@ -12,7 +12,7 @@ namespace Overthrown.Content.Items.Armor.Vanity
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Torch's Head");
-			Tooltip.SetDefault("Seems like the head of a friendly dragon");
+			Tooltip.SetDefault("The replica head of a friendly dragon"); 
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}

@@ -12,7 +12,7 @@ namespace Overthrown.Content.Items.Armor.Vanity
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Torch's Hoodie");
-			Tooltip.SetDefault("It appears to make your arms a little scaly");
+			Tooltip.SetDefault("Hood not included");
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}

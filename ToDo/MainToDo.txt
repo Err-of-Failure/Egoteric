@@ -4,7 +4,7 @@ as fully developed characters.
 Weapons will be themed around their traits and a few beta ideas and sketches like Pyxl's Solid Light Projection Gloves or Vidia's Servant of the Devil
 (a play on Demiurge's aspect of the devil plus Mirajane's Takeover).
 
-Characters to include are Pyxl, Vidia, Gamma, Dark, Marri, Master(hard maybe), Claire, Torch, Pyre, Kinder, Kawatta, Saam, a fox, and some guy named Nate.
+Characters to include are Pyxl, Vidia, Gamma, Dark, Marri, Master, Claire, Torch, Pyre, Kinder, Kawatta, Saam, a fox, and some guy named Nate.
 
 It'd be neat to be able to inject Gamma into other mods like the Stellar Array.
 
@@ -12,10 +12,11 @@ Character traits -
 
 Gamma is, in every conceivable way, unbeatable. Her powers enable her to modify the game she's inhabiting whenever she feels, as well as jump through time,
 with the only restriction being that there cannot be two of herself in the time between when she chooses to enter a segment and when the same Gamma decides
-to leave. Other instances of herself can only talk to the first, and view things from a ghost's point of view.
+to leave. Other instances of herself can only talk to the first, and view things from a ghost's point of view. A small exception to this is her Save State,
+which works identically to Omega Flowey, which doesn't so much shift time as much as it does relocate space.
 
 Dark's secondary personality was shifted over to Master, so Dark is now just pure brutality and the only equal to Gamma. Their relentlessness is beyond
-comprehension, tearing through space, time, and even Gamma's Hard Reset.
+comprehension, tearing through space, time, and even Gamma's Hard Reset. Not that it matters, but they maintained Vidia's intelligence.
 
 Master is pure confidence with an emphasis on manipulation. Her strength is persuading and commanding others to dodge conflict. When overwhelmed or threatened,
 she can command anyone to stop, which they are completely unable to disobey.
@@ -65,11 +66,11 @@ Torch Group Items:
 which one to use. Jack
 
 #Vidia - Less attacks to optimize efficiency. She can summon a set of hell creatures, like demons, imps, and hellhounds to attack on her behalf.
-She can also merge with one of them to inheirit their traits and combat styles. Dark actually attacks very similarly to hellhound. Jack
+She can also merge with one of them to inherit their traits and combat styles. Dark actually attacks very similarly to hellhound. Jack
 
 #Gamma - An absolute flurry of attacks themed around coding and cheats. Absolutely just playing along. Magic
 
-#Dark - Imagine Duke Fishron, but a terrifying creature of darkness, faster, and hits harder than a Dungeon Guardian. Yikes. Melee
+#Dark - Imagine Duke Fishron, but a terrifying creature of darkness that moves faster and hits harder than a Dungeon Guardian. Yikes. Melee
 
 #Master - Because she's less serious than anyone else, it's less of a fight and more of a minigame. Jack
 
@@ -89,7 +90,7 @@ Merricide group items -
 	Pyxl's Solid Light Projection Gloves were a concept design for a hologram keyboard for music. After character development, the keyboard's
 	not her preferred instrument, but the gloves are versatile enough to still be used.
 
-	{Dark Bass
+	{Bass Breaker
 	x magic damage
 	Slow speed
 	Insane knockback
@@ -110,32 +111,29 @@ Merricide group items -
 	Equipable
 	Increases your summoning capabilities substantially
 	Extremely limits the use of other classes
-	"If I'm entertaining enough, they won't want to leave... right?"
+	"If I'm the main character, then no one will leave... right?"
 	Master}
 
 	{Memento of Betrayal
 	Equipable
 	Increases your melee capabilities substantially
 	Extremely limits the use of other classes
-	"Not one person was on my side..."
+	"No one will ever lie to me again..."
 	Master}
 
 	{Memento of Isolation
 	Equipable
 	Increases your ranged and throwing capabilities substantially
 	Extremely limits the use of other classes
-	"After all, not a single person would care..."
+	"I don't need anyone but myself..."
 	Master}
 
 	{Memento of Death
 	Equipable
 	Increases your magic capabilities substantially
 	Extremely limits the use of other classes
-	"Just one word echoed... Why..."
+	"Just one thought remained... Why..."
 	Master}
-
-	I've been on a psychology kick lately after my therapist accidently had me relive the "water incident". Don't want to start making things too
-	depressing, but all the Negatives are EXTREMELY connected to my past and their villainous tendencies make them WAY too effective.
 
 Other items relating to Marri
 
