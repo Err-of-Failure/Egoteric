@@ -6,7 +6,7 @@ Spawn: Pre-hardmode, After killing King Slime, Eye of Cthulhu, Eater of Worlds/B
 
 Pyre - 
 [
-Spawn: Pre-hardmode, While Torch is alive, Wall of Flesh, Queen Bee and Plantera is killed
+Spawn: Hardmode, While Torch is alive, Wall of Flesh, Queen Bee and Plantera is killed
 
 ]
 

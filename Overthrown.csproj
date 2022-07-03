@@ -8,46 +8,15 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Content\Items\Armor\Void Helmet.cs" />
-    <Compile Remove="Content\Items\DebugItem.cs" />
-    <Compile Remove="Content\Items\Weapons\Whatever.cs" />
-    <Compile Remove="Content\Rarities\VoidHigherRarity.cs" />
-    <Compile Remove="Content\Rarities\VoidRarity.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Assets\Textures\NewFile1.txt" />
-    <None Remove="Content\Items\Accessories\Abando" />
-    <None Remove="Content\Items\Accessories\MementoOfAbandonment.png" />
-    <None Remove="Content\Items\Accessories\MementoOfBetrayal.png" />
-    <None Remove="Content\Items\Accessories\MementoOfDeath.png" />
-    <None Remove="Content\Items\Accessories\MementoOfIsolation.png" />
-    <None Remove="Content\Items\Armor\Vanity\DevItem.png" />
-    <None Remove="Content\Items\Armor\Vanity\PyxlBody.png" />
-    <None Remove="Content\Items\Armor\Vanity\PyxlHeadIcon.png" />
-    <None Remove="Content\Items\Armor\Vanity\PyxlLegs.png" />
-    <None Remove="Content\Items\Armor\Vanity\PyxlShirt" />
-    <None Remove="Content\Items\Armor\Vanity\PyxlShirtIcon.png" />
-    <None Remove="Content\Items\Armor\Vanity\PyxlShirt_Bosy.png" />
-    <None Remove="Content\Items\Armor\Vanity\TorchBody.png" />
-    <None Remove="Content\Items\Armor\Vanity\TorchBody_Body.png" />
-    <None Remove="Content\Items\Armor\Vanity\TorchLegs.png" />
-    <None Remove="Content\Items\Armor\Vanity\TorchLegs_Legs.png" />
-    <None Remove="Content\Items\DebugItem" />
-    <None Remove="Content\Items\DebugItem.png" />
-    <None Remove="Content\Items\Default.png" />
-    <None Remove="Content\Items\VoidCrystal" />
-    <None Remove="Content\Items\VoidCrystal.ong" />
-    <None Remove="Content\Items\Weapons\DebugItem.png" />
-    <None Remove="Content\Rarities\PyxlBaseRarity" />
-    <None Remove="ToDo\NewFile1.txt" />
-    <None Remove="ToDo\The Archives\OC Template - Copy %287%29.txt" />
-    <None Remove="ToDo\The Archives\tROCH" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Textures\" />
     <Folder Include="Content\NPCs\Enemies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="StructureHelper">
+      <HintPath>..\Mod Libraries\StructureHelper_v2.0.7.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -6,8 +6,13 @@ namespace Overthrown
 	public class Overthrown : Mod
 	{
 		public const string ASSET_PATH = "Overthrown/Assets";
+		public const string STRUCTURE_PATH = "Overthrown/World/Structures";
 
 		public static int VoidCurrencyId;
+
+		public Overthrown() { Instance = this; }
+
+		public static Overthrown Instance { get; set; }
 
 		public override void Load()
 		{
