@@ -14,6 +14,7 @@ using Terraria.GameContent.UI;
 using Overthrown.Content.GUI;
 using Overthrown.World.ChestHelper;
 using Overthrown.World.ChestHelper.GUI;
+using Overthrown.Content.Items.StructureCreation;
 
 
 namespace Overthrown
@@ -81,16 +82,16 @@ namespace Overthrown
 
         public override void PostDrawInterface(SpriteBatch spriteBatch)
         {
-            if (Main.LocalPlayer.HeldItem.ModItem is CopyWand)
+            if (Main.LocalPlayer.HeldItem.ModItem is SaveStructure)
             {
                 spriteBatch.End();
                 spriteBatch.Begin(default, default, default, default, default, default, Main.GameViewMatrix.ZoomMatrix);
 
                 Texture2D tex = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Corner").Value;
                 Texture2D tex2 = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Box").Value;
-                Point16 TopLeft = (Main.LocalPlayer.HeldItem.ModItem as CopyWand).TopLeft;
-                int Width = (Main.LocalPlayer.HeldItem.ModItem as CopyWand).Width;
-                int Height = (Main.LocalPlayer.HeldItem.ModItem as CopyWand).Height;
+                Point16 TopLeft = (Main.LocalPlayer.HeldItem.ModItem as SaveStructure).TopLeft;
+                int Width = (Main.LocalPlayer.HeldItem.ModItem as SaveStructure).Width;
+                int Height = (Main.LocalPlayer.HeldItem.ModItem as SaveStructure).Height;
 
                 float tileScale = 16 * Main.GameViewMatrix.Zoom.Length() * 0.707106688737f;
                 Vector2 pos = (Main.MouseWorld / tileScale).ToPoint16().ToVector2() * tileScale - Main.screenPosition;
@@ -110,17 +111,17 @@ namespace Overthrown
                 spriteBatch.Begin(default, default, default, default, default, default, Main.UIScaleMatrix);
             }
 
-            if (Main.LocalPlayer.HeldItem.ModItem is MultiWand)
+            if (Main.LocalPlayer.HeldItem.ModItem is SaveMultiStructure)
             {
                 spriteBatch.End();
                 spriteBatch.Begin(default, default, default, default, default, default, Main.GameViewMatrix.ZoomMatrix);
 
                 Texture2D tex = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Corner").Value;
                 Texture2D tex2 = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Box").Value;
-                Point16 TopLeft = (Main.LocalPlayer.HeldItem.ModItem as MultiWand).TopLeft;
-                int Width = (Main.LocalPlayer.HeldItem.ModItem as MultiWand).Width;
-                int Height = (Main.LocalPlayer.HeldItem.ModItem as MultiWand).Height;
-                int count = (Main.LocalPlayer.HeldItem.ModItem as MultiWand).StructureCache.Count;
+                Point16 TopLeft = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).TopLeft;
+                int Width = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).Width;
+                int Height = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).Height;
+                int count = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).StructureCache.Count;
 
                 float tileScale = 16 * Main.GameViewMatrix.Zoom.Length() * 0.707106688737f;
                 Vector2 pos = (Main.MouseWorld / tileScale).ToPoint16().ToVector2() * tileScale - Main.screenPosition;

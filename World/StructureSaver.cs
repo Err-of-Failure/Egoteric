@@ -37,7 +37,7 @@ namespace Overthrown.World
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
-            string thisPath = targetPath ?? Path.Combine(path, "MultiStructure " + DateTime.Now.ToString("d-M-y, H-m-s-f") + ".nbt"));
+            string thisPath = targetPath ?? Path.Combine(path, "MultiStructure " + DateTime.Now.ToString("d-M-y, H-m-s-f") + ".nbt");
 
             Main.NewText("Structure saved as " + thisPath, Color.Yellow);
             FileStream stream = File.Create(thisPath);

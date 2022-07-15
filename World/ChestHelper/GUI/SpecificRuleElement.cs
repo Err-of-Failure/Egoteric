@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Overthrown.World.ChestHelper;
 
 namespace Overthrown.World.ChestHelper.GUI
 {
-    class GuarunteedRuleElement : ChestRuleElement
+	class GuaranteedRuleElement : ChestRuleElement
 	{
 		public GuaranteedRuleElement() : base(new ChestRuleGuaranteed())
 		{

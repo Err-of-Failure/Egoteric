@@ -230,7 +230,7 @@ namespace Overthrown.Content.GUI
             GeneratorMenu.multiIndex = 0;
 
             if (!StructureGenerator.StructureDataCache.ContainsKey(Path))
-                StructureGenerator.LoadFile(Path, StructureHelper.Instance, true);
+                StructureGenerator.LoadFile(Path, Overthrown.Instance, true);
 
             if (StructureGenerator.StructureDataCache[Path].ContainsKey("Structures"))
             {

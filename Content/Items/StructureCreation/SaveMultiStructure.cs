@@ -31,7 +31,7 @@ namespace Overthrown.Content.Items.StructureCreation
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Multistructure Saver);
+            DisplayName.SetDefault("Multistructure Saver");
             Tooltip.SetDefault("Just like the Strucure Save, Left click to select the first point and click again to select the second point"
                 + "Right click to add a structure to the Multistructure list"
                 + "Right click in the inventory to save the Multistructure to a file"
@@ -57,8 +57,8 @@ namespace Overthrown.Content.Items.StructureCreation
 
         public override bool? UseItem(Player player)
         {
-            if (player.altFunctionUse == 2 && !SecondPoint && TopLeft != default)
-                StructureCache.Add(Saver.SaveStructure(target));
+            if (player.altFunctionUse == 2 && !point2 && TopLeft != default)
+                StructureCache.Add(StructureSaver.SaveStructure(target));
 
             else if (!point2)
             {

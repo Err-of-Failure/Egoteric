@@ -10,7 +10,7 @@ namespace Overthrown.World.ChestHelper
 {
     //This is all copied from Structure Helper sadly, but it only because we didn't want to have a need to install Structure Helper just to use our mod.
     class ChestRuleGuaranteed : ChestRule
-    {
+    {   
         public override string Name => "Guaranteed Rule";
 
         public override string Tooltip => "Always generates every item in the rule\nItems are generated in the order they appear here";

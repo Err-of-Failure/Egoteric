@@ -38,7 +38,7 @@ namespace Overthrown.World.ChestHelper.GUI
             Append(scrollBar);
 
             GeneratorMenu.SetDims(NewGuaranteed, -200, 0.5f, -50, 0.1f, 32, 0, 32, 0);
-            NewGuaranteed.OnClick += (n, m) => ruleElements.Add(new GuarunteedRuleElement());
+            NewGuaranteed.OnClick += (n, m) => ruleElements.Add(new GuaranteedRuleElement());
             Append(NewGuaranteed);
 
             GeneratorMenu.SetDims(NewChance, -160, 0.5f, -50, 0.1f, 32, 0, 32, 0);
