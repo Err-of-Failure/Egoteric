@@ -125,7 +125,7 @@ namespace Overthrown.World
                 }
 
                 //Point16 location = new Point16(x - 29, y - 26); //Test
-                Point16 location = new Point16(x, y - dimensions.Y + 4); //Test2
+                Point16 location = new Point16(x, y - dimensions.Y + 5); //Test2
                 //Point16 location = new Point16(x, y);
 
                 StructureGenerator.GenerateStructure("World/Structures/BasicStarterHouse", location, Overthrown.Instance, false, false);
