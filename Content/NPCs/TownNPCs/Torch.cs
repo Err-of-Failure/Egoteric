@@ -21,9 +21,9 @@ namespace Overthrown.Content.NPCs.TownNPCs
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Torch");
-            Main.npcFrameCount[Type] = 25;
+            Main.npcFrameCount[Type] = 26;
             NPCID.Sets.ExtraFramesCount[Type] = 9;
-            NPCID.Sets.AttackFrameCount[Type] = 4;
+            NPCID.Sets.AttackFrameCount[Type] = 5;
             NPCID.Sets.DangerDetectRange[Type] = 700;
             NPCID.Sets.AttackType[Type] = 0;
             NPCID.Sets.AttackTime[Type] = 90;

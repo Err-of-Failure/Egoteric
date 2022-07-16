@@ -28,7 +28,7 @@
 				FarFromHome: I want to go home.
 				DislikeCrowded: It's starting to feel very crampt here.
 				HateCrowded: THERE ARE TOO MANY PEOPLE HERE!
-				LikeBiome: "{BiomeName} is a very nice place to be in."
+				LikeBiome: "Being in {BiomeName} is very nice."
 				LoveBiome: "I love {BiomeName}."
 				DislikeBiome: "I don't like it in {BiomeName}, it's distracting"
 				HateBiome: "Its kind of hard to stay nice while being attacked by monsters in {BiomeName}."
