@@ -8,7 +8,7 @@ using Terraria.GameContent.Creative;
 using Overthrown.Content.DamageClasses;
 using Overthrown.Content.Rarities;
 
-namespace Overthrown.Content.Items.Weapons
+namespace Overthrown.Content.Items.Weapons.Melee
 {
     internal class VoidSword : ModItem
     {
