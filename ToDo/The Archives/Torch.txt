@@ -9,7 +9,7 @@ Alignment: Neutral Good
 Relationships: Pyre (Father Figure/Best Friend)
 			   Kawatta (Mother Figure, Sort of Guardian)
 			   Kinder (Adopted Brother)
-Alternate Forms: Todo...
+Alternate Forms: Scorch (Not planned to be implemented into mod)
 
 Description: A dragon-like humanoid that primarily has light red scales with the ends covered in dark red scales. He doesn't really 
 			 have true hair, more just like a tuft of hair above his eyes. Usually wears a light gray hoodie, a dark cyan scarf that always covers
@@ -19,10 +19,10 @@ Personality: Typically Kindhearted, Outgoing, Sympathetic, and Adventurous
 
 Origin Abridged: Abandoned by parents, discovered by Pyre.
 
-Traits: Talkative, 
+Traits: Talkative, Friendly, and Caring
 
-Abilities:
+Abilities: Flight (if we can create wings on the npc), Healing
 
-Preferred Superpower:
+Preferred Superpower: Animal Communication (kinda like summons)
 
-Superpower Weaknesses (Required 1+):
+Superpower Weaknesses (Required 1+): Can't interact with smaller creatures, such as ants, and isnt always guaranteed control of the animal
