@@ -21,9 +21,9 @@ namespace Overthrown.Content.Items.StructureCreation
         {
             DisplayName.SetDefault("Chest Editor");
             Tooltip.SetDefault("Right click to open the chest rule menu"
-                + "Left click a chest to set the current rules on it"
-                + "Right click a chest with rules to copy them"
-                + "DEV ITEM");
+                + "\nLeft click a chest to set the current rules on it"
+                + "\nRight click a chest with rules to copy them"
+                + "\nDEV ITEM");
         }
         public override void SetDefaults()
         {

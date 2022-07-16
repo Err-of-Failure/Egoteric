@@ -33,9 +33,9 @@ namespace Overthrown.Content.Items.StructureCreation
         {
             DisplayName.SetDefault("Multistructure Saver");
             Tooltip.SetDefault("Just like the Strucure Save, Left click to select the first point and click again to select the second point"
-                + "Right click to add a structure to the Multistructure list"
-                + "Right click in the inventory to save the Multistructure to a file"
-                + "DEV ITEM");
+                + "\nRight click to add a structure to the Multistructure list"
+                + "\nRight click in the inventory to save the Multistructure to a file"
+                + "\nDEV ITEM");
         }
 
         public override void SetDefaults()
@@ -75,7 +75,7 @@ namespace Overthrown.Content.Items.StructureCreation
                 Width = bottomRight.X - TopLeft.X - 1;
                 Height = bottomRight.Y - TopLeft.Y - 1;
                 Main.NewText("Structure is ready to add to the list!"
-                    + "Right click to add this structure, Right click in inventory to save all structures to a file");
+                    + "\nRight click to add this structure, Right click in inventory to save all structures to a file");
                 point2 = false;
             }
 

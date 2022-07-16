@@ -25,8 +25,8 @@ namespace Overthrown.Content.Items.StructureCreation
         {
             DisplayName.SetDefault("Structure Placer");
             Tooltip.SetDefault("Left click to place a specified structure" 
-                + "Right click to open the structure selection GUI"
-                + "DEV ITEM");
+                + "\nRight click to open the structure selection GUI"
+                + "\nDEV ITEM");
         }
 
         public override void SetDefaults()

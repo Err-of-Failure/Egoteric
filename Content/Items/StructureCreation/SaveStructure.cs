@@ -26,10 +26,10 @@ namespace Overthrown.Content.Items.StructureCreation
         {
             DisplayName.SetDefault("Structure Saver");
             Tooltip.SetDefault("Left click once to select the Top Left point of the structure"
-                + "Left click again to select the Bottom Right point of the structure"
-                + "Right click saves the structure to a file"
-                + "If you left click again after selecting a second point, you have to reselect the two points"
-                + "DEV ITEM");
+                + "\nLeft click again to select the Bottom Right point of the structure"
+                + "\nRight click saves the structure to a file"
+                + "\nIf you left click again after selecting a second point, you have to reselect the two points"
+                + "\nDEV ITEM");
         }
         public override void SetDefaults()
         {

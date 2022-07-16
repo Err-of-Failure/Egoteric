@@ -158,7 +158,7 @@ namespace Overthrown.World
                     if (!int.TryParse(d.Tile, out int type))
                     {
                         string[] parts = d.Tile.Split();
-                        if (parts[0] == "StructureHelper" && parts[1] == "NullBlock" && !ignoreNull) isNullTile = true;
+                        if (parts[0] == "StructureHelper" && parts[1] == "NullBlock" && !ignoreNull || parts[0] == "Overthrown" && parts[1] == "NullBlock" && !ignoreNull) isNullTile = true;
 
                         else if (parts.Length > 1 && ModLoader.GetMod(parts[0]) != null && ModLoader.GetMod(parts[0]).TryFind<ModTile>(parts[1], out ModTile modTileType))
                             type = modTileType.Type;
@@ -169,7 +169,7 @@ namespace Overthrown.World
                     if (!int.TryParse(d.Wall, out int wallType))
                     {
                         string[] parts = d.Wall.Split();
-                        if (parts[0] == "StructureHelper" && parts[1] == "NullWall" && !ignoreNull) isNullWall = true;
+                        if (parts[0] == "StructureHelper" && parts[1] == "NullWall" && !ignoreNull || parts[0] == "Overthrown" && parts[1] == "NullWall" && !ignoreNull) isNullWall = true;
 
                         else if (parts.Length > 1 && ModLoader.GetMod(parts[0]) != null && ModLoader.GetMod(parts[0]).TryFind<ModWall>(parts[1], out ModWall modWallType))
                             wallType = modWallType.Type;
