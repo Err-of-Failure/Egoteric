@@ -172,14 +172,14 @@ namespace Overthrown.Content.NPCs.TownNPCs
         public Asset<Texture2D> GetTextureNPCShouldUse(NPC npc)
         {
             if (npc.IsABestiaryIconDummy && !npc.ForcePartyHatOn)
-                return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/Torch");
+                return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/TownNPCs/Torch");
 
             if (npc.altTexture == 1)
-                return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/Torch_Party");
+                return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/TownNPCs/Torch_Party");
 
-            return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/Torch");
+            return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/TownNPCs/Torch");
         }
 
-        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Overthrown/Content/NPCs/Torch_Head");
+        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Overthrown/Content/NPCs/TownNPCs/Torch_Head");
     }
 }
