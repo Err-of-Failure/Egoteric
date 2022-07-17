@@ -11,7 +11,7 @@ namespace Overthrown.Content.Items.Armor.Vanity
     {
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Pyxl's Hait");
+			DisplayName.SetDefault("Pyxl's Hair");
 			Tooltip.SetDefault("Beta Item");
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
