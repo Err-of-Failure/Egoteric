@@ -1,7 +1,11 @@
 ﻿using Overthrown.Content.Items;
 using Overthrown.Content.Items.Armor;
 using Overthrown.Content.Items.Armor.Vanity;
-using Overthrown.Content.Items.Weapons;
+//using Overthrown.Content.Items.Weapons.Magic;
+using Overthrown.Content.Items.Weapons.Throwables;
+//using Overthrown.Content.Items.Weapons.Ranged;
+//using Overthrown.Content.Items.Weapons.Summon;
+using Overthrown.Content.Items.Weapons.Melee;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -18,7 +22,9 @@ namespace Overthrown.Common.Players
 			{
 				return new[] 
 				{
-					new Item(ModContent.ItemType<PyxlShirt>())
+					new Item(ModContent.ItemType<PyxlShirt>()),
+					new Item(ModContent.ItemType<PyxlHead>()),
+					new Item(ModContent.ItemType<PyxlLegs>())
 				};
 			}
 			if (Player.name == "Torch")
