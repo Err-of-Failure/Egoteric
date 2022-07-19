@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Overthrown.World.ChestHelper;
+using Egoteric.World.ChestHelper;
 
-namespace Overthrown.World.ChestHelper.GUI
+namespace Egoteric.World.ChestHelper.GUI
 {
 	class GuaranteedRuleElement : ChestRuleElement
 	{

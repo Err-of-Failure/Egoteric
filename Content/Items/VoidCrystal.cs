@@ -5,9 +5,9 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
-using Overthrown.Content.Rarities;
+using Egoteric.Content.Rarities;
 
-namespace Overthrown.Content.Items
+namespace Egoteric.Content.Items
 {
 	internal class VoidCrystal : ModItem
 	{

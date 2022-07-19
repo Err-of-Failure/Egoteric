@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace Overthrown.Content.DamageClasses
+namespace Egoteric.Content.DamageClasses
 {
     internal class Void : DamageClass
     {

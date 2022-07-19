@@ -6,27 +6,27 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Overthrown.Content.GUI;
+using Egoteric.Content.GUI;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.ModLoader;
 using Terraria.UI;
 using static Terraria.ModLoader.ModContent;
-using Overthrown.World;
+using Egoteric.World;
 
-namespace Overthrown.World.ChestHelper.GUI
+namespace Egoteric.World.ChestHelper.GUI
 {
     class LootElement : UIElement
     {
         Loot loot;
-        UIImageButton removeButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/RedX"));
+        UIImageButton removeButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/RedX"));
 
         NumberSetter min;
         NumberSetter max;
         NumberSetter weight;
 
-        UIImageButton upButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Up"));
-        UIImageButton downButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Down"));
+        UIImageButton upButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Up"));
+        UIImageButton downButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Down"));
 
         public LootElement(Loot loot, bool hasWeight)
         {

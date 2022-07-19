@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Overthrown.Content.GUI;
+using Egoteric.Content.GUI;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.UI;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using Overthrown.World;
+using Egoteric.World;
 
-namespace Overthrown.World.ChestHelper.GUI
+namespace Egoteric.World.ChestHelper.GUI
 {
     internal class ChestCustomizer : UIState
     {
@@ -22,12 +22,12 @@ namespace Overthrown.World.ChestHelper.GUI
         internal UIList ruleElements = new UIList();
         internal UIScrollbar scrollBar = new UIScrollbar();
 
-        UIImageButton NewGuaranteed = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/RedPlus"));
-        UIImageButton NewChance = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/GreenPlus"));
-        UIImageButton NewPool = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/PinkPlus"));
-        UIImageButton NewPoolChance = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/BluePlus"));
+        UIImageButton NewGuaranteed = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/RedPlus"));
+        UIImageButton NewChance = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/GreenPlus"));
+        UIImageButton NewPool = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/PinkPlus"));
+        UIImageButton NewPoolChance = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/BluePlus"));
 
-        public static UIImageButton closeButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/RedX"));
+        public static UIImageButton closeButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/RedX"));
 
         public override void OnInitialize()
         {

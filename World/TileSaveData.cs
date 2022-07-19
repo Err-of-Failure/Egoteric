@@ -3,7 +3,7 @@ using Terraria.ModLoader.IO;
 using Terraria.ModLoader;
 using Terraria;
 
-namespace Overthrown.World
+namespace Egoteric.World
 {
     //This is all copied from Structure Helper sadly, but it only because we didn't want to have a need to install Structure Helper just to use our mod.
     public struct TileSaveData : TagSerializable

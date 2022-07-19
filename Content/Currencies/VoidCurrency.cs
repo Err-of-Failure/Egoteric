@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.GameContent.UI;
 using Terraria.Localization;
 
-namespace Overthrown.Content.Currencies
+namespace Egoteric.Content.Currencies
 {
     internal class VoidCurrency : CustomCurrencySingleCoin
     {

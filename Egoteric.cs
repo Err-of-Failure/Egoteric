@@ -11,28 +11,28 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Terraria.GameContent.UI;
-using Overthrown.Content.GUI;
-using Overthrown.World.ChestHelper;
-using Overthrown.World.ChestHelper.GUI;
-using Overthrown.Content.Items.StructureCreation;
+using Egoteric.Content.GUI;
+using Egoteric.World.ChestHelper;
+using Egoteric.World.ChestHelper.GUI;
+using Egoteric.Content.Items.StructureCreation;
 
 
-namespace Overthrown
+namespace Egoteric
 {
-	public class Overthrown : Mod
+	public class Egoteric : Mod
 	{
-		public const string ASSET_PATH = "Overthrown/Assets";
-		public const string STRUCTURE_PATH = "Overthrown/World/Structures";
+		public const string ASSET_PATH = "Egoteric/Assets";
+		public const string STRUCTURE_PATH = "Egoteric/World/Structures";
 
 		public static int VoidCurrencyId;
 
-		public Overthrown() { Instance = this; }
+		public Egoteric() { Instance = this; }
 
-		public static Overthrown Instance { get; set; }
+		public static Egoteric Instance { get; set; }
 
 		public override void Load()
 		{
-			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<Content.Items.VoidCrystal>(), 999L, "Mods.Overthrown.Currencies.VoidCurrency"));
+			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<Content.Items.VoidCrystal>(), 999L, "Mods.Egoteric.Currencies.VoidCurrency"));
 		}
 
         public override void Unload()
@@ -87,8 +87,8 @@ namespace Overthrown
                 spriteBatch.End();
                 spriteBatch.Begin(default, default, default, default, default, default, Main.GameViewMatrix.ZoomMatrix);
 
-                Texture2D tex = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Corner").Value;
-                Texture2D tex2 = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Box").Value;
+                Texture2D tex = ModContent.Request<Texture2D>("Egoteric/Assets/Textures/Corner").Value;
+                Texture2D tex2 = ModContent.Request<Texture2D>("Egoteric/Assets/Textures/Box").Value;
                 Point16 TopLeft = (Main.LocalPlayer.HeldItem.ModItem as SaveStructure).TopLeft;
                 int Width = (Main.LocalPlayer.HeldItem.ModItem as SaveStructure).Width;
                 int Height = (Main.LocalPlayer.HeldItem.ModItem as SaveStructure).Height;
@@ -116,8 +116,8 @@ namespace Overthrown
                 spriteBatch.End();
                 spriteBatch.Begin(default, default, default, default, default, default, Main.GameViewMatrix.ZoomMatrix);
 
-                Texture2D tex = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Corner").Value;
-                Texture2D tex2 = ModContent.Request<Texture2D>("Overthrown/Assets/Textures/Box").Value;
+                Texture2D tex = ModContent.Request<Texture2D>("Egoteric/Assets/Textures/Corner").Value;
+                Texture2D tex2 = ModContent.Request<Texture2D>("Egoteric/Assets/Textures/Box").Value;
                 Point16 TopLeft = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).TopLeft;
                 int Width = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).Width;
                 int Height = (Main.LocalPlayer.HeldItem.ModItem as SaveMultiStructure).Height;

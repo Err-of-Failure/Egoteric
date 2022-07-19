@@ -1,18 +1,19 @@
-﻿using Overthrown.Content.Items;
-using Overthrown.Content.Items.Armor;
-using Overthrown.Content.Items.Armor.Vanity;
-//using Overthrown.Content.Items.Weapons.Magic;
-using Overthrown.Content.Items.Weapons.Throwables;
-//using Overthrown.Content.Items.Weapons.Ranged;
-//using Overthrown.Content.Items.Weapons.Summon;
-using Overthrown.Content.Items.Weapons.Melee;
+﻿using Egoteric.Content.Items;
+using Egoteric.Content.Items.Armor;
+using Egoteric.Content.Items.Armor.Vanity;
+//using Egoteric.Content.Items.Weapons.Magic;
+using Egoteric.Content.Items.Weapons.Throwables;
+//using Egoteric.Content.Items.Weapons.Ranged;
+//using Egoteric.Content.Items.Weapons.Summon;
+using Egoteric.Content.Items.Weapons.Melee;
+using Egoteric.Content.Tiles;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Linq;
 
-namespace Overthrown.Common.Players
+namespace Egoteric.Common.Players
 {
     public class SpawnInventory : ModPlayer
     {

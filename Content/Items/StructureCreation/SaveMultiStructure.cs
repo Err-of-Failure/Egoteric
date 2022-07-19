@@ -10,10 +10,10 @@ using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.IO;
 using Terraria.ID;
-using Overthrown.Content.Rarities;
-using Overthrown.World;
+using Egoteric.Content.Rarities;
+using Egoteric.World;
 
-namespace Overthrown.Content.Items.StructureCreation
+namespace Egoteric.Content.Items.StructureCreation
 {
     internal class SaveMultiStructure : ModItem
     {

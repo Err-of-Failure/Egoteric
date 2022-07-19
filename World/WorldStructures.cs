@@ -15,9 +15,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Terraria.IO;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures; 
-using Overthrown.World;
+using Egoteric.World;
 
-namespace Overthrown.World
+namespace Egoteric.World
 {
     public class WorldStructures : ModSystem
     {
@@ -110,7 +110,7 @@ namespace Overthrown.World
 
                 Point16 dimensions = new Point16(0, 0);
 
-                StructureGenerator.GetDimensions("World/Structures/BasicStarterHouse.nbt", Overthrown.Instance, ref dimensions, false);
+                StructureGenerator.GetDimensions("World/Structures/BasicStarterHouse.nbt", Egoteric.Instance, ref dimensions, false);
 
                 if (!WorldStructures.CheckFlat(x, y, dimensions.X, 3))
                     continue;
@@ -128,7 +128,7 @@ namespace Overthrown.World
                 Point16 location = new Point16(x, y - dimensions.Y + 5); //Test2
                 //Point16 location = new Point16(x, y);
 
-                StructureGenerator.GenerateStructure("World/Structures/BasicStarterHouse.nbt", location, Overthrown.Instance, false, false);
+                StructureGenerator.GenerateStructure("World/Structures/BasicStarterHouse.nbt", location, Egoteric.Instance, false, false);
 
                 placed = true;
             }

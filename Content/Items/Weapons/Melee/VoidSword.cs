@@ -5,10 +5,10 @@ using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
-using Overthrown.Content.DamageClasses;
-using Overthrown.Content.Rarities;
+using Egoteric.Content.DamageClasses;
+using Egoteric.Content.Rarities;
 
-namespace Overthrown.Content.Items.Weapons.Melee
+namespace Egoteric.Content.Items.Weapons.Melee
 {
     internal class VoidSword : ModItem
     {

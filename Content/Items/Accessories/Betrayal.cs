@@ -1,12 +1,12 @@
-﻿using Overthrown.Content.Items.Accessories;
-using Overthrown.Content.DamageClasses;
-using Overthrown.Content.Rarities;
+﻿using Egoteric.Content.Items.Accessories;
+using Egoteric.Content.DamageClasses;
+using Egoteric.Content.Rarities;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace Overthrown.Content.Items.Accessories
+namespace Egoteric.Content.Items.Accessories
 {
     public class Betrayal : ModItem
     {
@@ -25,6 +25,7 @@ namespace Overthrown.Content.Items.Accessories
 			Item.width = 38;
 			Item.height = 44;
 			Item.accessory = true;
+			Item.master = true;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)

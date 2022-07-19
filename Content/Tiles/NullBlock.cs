@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
-using Overthrown.Content.Rarities;
+using Egoteric.Content.Rarities;
 
-namespace Overthrown.Content.Tiles
+namespace Egoteric.Content.Tiles
 {
     class NullBlock : ModTile
     {

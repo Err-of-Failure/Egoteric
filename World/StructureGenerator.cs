@@ -9,9 +9,9 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using System.Linq;
 using Terraria.ID;
-using Overthrown.World.ChestHelper;
+using Egoteric.World.ChestHelper;
 
-namespace Overthrown.World
+namespace Egoteric.World
 {
     //This is all copied from Structure Helper sadly, but it only because we didn't want to have a need to install Structure Helper just to use our mod.
     public static class StructureGenerator
@@ -78,7 +78,7 @@ namespace Overthrown.World
 
             if (index >= structures.Count || index < 0)
             {
-                Overthrown.Instance.Logger.Warn($"Attempted to generate structure {index} in mutistructure containing {structures.Count - 1} structures.");
+                Egoteric.Instance.Logger.Warn($"Attempted to generate structure {index} in mutistructure containing {structures.Count - 1} structures.");
                 return false;
             }
 
@@ -121,7 +121,7 @@ namespace Overthrown.World
             if (index >= structures.Count || index < 0)
             {
                 dims = new Point16(0, 0);
-                Overthrown.Instance.Logger.Warn($"Attempted to get dimensions of structure {index} in mutistructure containing {structures.Count - 1} structures.");
+                Egoteric.Instance.Logger.Warn($"Attempted to get dimensions of structure {index} in mutistructure containing {structures.Count - 1} structures.");
                 return false;
             }
 
@@ -137,7 +137,7 @@ namespace Overthrown.World
 
             if (data is null)
             {
-                Overthrown.Instance.Logger.Warn("Corrupt or Invalid structure data.");
+                Egoteric.Instance.Logger.Warn("Corrupt or Invalid structure data.");
                 return false;
             }
 
@@ -158,7 +158,7 @@ namespace Overthrown.World
                     if (!int.TryParse(d.Tile, out int type))
                     {
                         string[] parts = d.Tile.Split();
-                        if (parts[0] == "StructureHelper" && parts[1] == "NullBlock" && !ignoreNull || parts[0] == "Overthrown" && parts[1] == "NullBlock" && !ignoreNull) isNullTile = true;
+                        if (parts[0] == "StructureHelper" && parts[1] == "NullBlock" && !ignoreNull || parts[0] == "Egoteric" && parts[1] == "NullBlock" && !ignoreNull) isNullTile = true;
 
                         else if (parts.Length > 1 && ModLoader.GetMod(parts[0]) != null && ModLoader.GetMod(parts[0]).TryFind<ModTile>(parts[1], out ModTile modTileType))
                             type = modTileType.Type;
@@ -169,7 +169,7 @@ namespace Overthrown.World
                     if (!int.TryParse(d.Wall, out int wallType))
                     {
                         string[] parts = d.Wall.Split();
-                        if (parts[0] == "StructureHelper" && parts[1] == "NullWall" && !ignoreNull || parts[0] == "Overthrown" && parts[1] == "NullWall" && !ignoreNull) isNullWall = true;
+                        if (parts[0] == "StructureHelper" && parts[1] == "NullWall" && !ignoreNull || parts[0] == "Egoteric" && parts[1] == "NullWall" && !ignoreNull) isNullWall = true;
 
                         else if (parts.Length > 1 && ModLoader.GetMod(parts[0]) != null && ModLoader.GetMod(parts[0]).TryFind<ModWall>(parts[1], out ModWall modWallType))
                             wallType = modWallType.Type;
@@ -267,7 +267,7 @@ namespace Overthrown.World
 
             if (tag is null)
             {
-                Overthrown.Instance.Logger.Warn("Structure was unable to be found. Are you passing the correct path?");
+                Egoteric.Instance.Logger.Warn("Structure was unable to be found. Are you passing the correct path?");
                 return false;
             }
 

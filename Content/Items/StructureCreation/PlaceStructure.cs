@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Overthrown.Content.GUI;
+using Egoteric.Content.GUI;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,10 +9,10 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using Overthrown.Content.Rarities;
-using Overthrown.World;
+using Egoteric.Content.Rarities;
+using Egoteric.World;
 
-namespace Overthrown.Content.Items.StructureCreation
+namespace Egoteric.Content.Items.StructureCreation
 {
     internal class PlaceStructure : ModItem
     {
@@ -50,10 +50,10 @@ namespace Overthrown.Content.Items.StructureCreation
                 var pos = new Point16(Player.tileTargetX, Player.tileTargetY);
 
                 if (GeneratorMenu.multiMode)
-                    StructureGenerator.GenerateMultistructureSpecific(GeneratorMenu.selected.Path, pos, Overthrown.Instance, GeneratorMenu.multiIndex, true, GeneratorMenu.ignoreNulls);
+                    StructureGenerator.GenerateMultistructureSpecific(GeneratorMenu.selected.Path, pos, Egoteric.Instance, GeneratorMenu.multiIndex, true, GeneratorMenu.ignoreNulls);
 
                 else
-                    StructureGenerator.GenerateStructure(GeneratorMenu.selected.Path, pos, Overthrown.Instance, true, GeneratorMenu.ignoreNulls);
+                    StructureGenerator.GenerateStructure(GeneratorMenu.selected.Path, pos, Egoteric.Instance, true, GeneratorMenu.ignoreNulls);
             }
             else
                 Main.NewText("There was no structure selected, press right click and select a structure from the GUI to generate it.", Color.Red);

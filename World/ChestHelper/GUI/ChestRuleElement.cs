@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Overthrown.Content.GUI;
+using Egoteric.Content.GUI;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.UI;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace Overthrown.World.ChestHelper.GUI
+namespace Egoteric.World.ChestHelper.GUI
 {
     class ChestRuleElement : UIElement
     {
@@ -21,11 +21,11 @@ namespace Overthrown.World.ChestHelper.GUI
         internal float storedHeight = 0;
 
         internal UIList lootElements = new UIList();
-        UIImageButton removeButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/RedX"));
+        UIImageButton removeButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/RedX"));
 
-        UIImageButton upButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/UpLarge"));
-        UIImageButton downButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/DownLarge"));
-        UIImageButton hideButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Eye"));
+        UIImageButton upButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/UpLarge"));
+        UIImageButton downButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/DownLarge"));
+        UIImageButton hideButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Eye"));
 
         public ChestRuleElement(ChestRule rule)
         {
@@ -78,13 +78,13 @@ namespace Overthrown.World.ChestHelper.GUI
         {
             if (storedHeight == 0)
             {
-                hideButton.SetImage(ModContent.Request<Texture2D>("Overthrown/Content/GUI/EyeClosed"));
+                hideButton.SetImage(ModContent.Request<Texture2D>("Egoteric/Content/GUI/EyeClosed"));
                 storedHeight = GetDimensions().Height;
                 Height.Set(36, 0);
             }
             else
             {
-                hideButton.SetImage(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Eye"));
+                hideButton.SetImage(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Eye"));
                 Height.Set(storedHeight, 0);
                 storedHeight = 0;
             }

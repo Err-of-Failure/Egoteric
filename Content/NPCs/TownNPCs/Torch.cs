@@ -11,7 +11,7 @@ using Terraria.GameContent;
 using ReLogic.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Overthrown.Content.NPCs.TownNPCs
+namespace Egoteric.Content.NPCs.TownNPCs
 {
     [AutoloadHead]
     public class Torch : ModNPC
@@ -100,19 +100,19 @@ namespace Overthrown.Content.NPCs.TownNPCs
             int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
             if (partyGirl >= 0 && Main.rand.NextBool(4))
             {
-                chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.PartyGirlDialogue", Main.npc[partyGirl].GivenName));
+                chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.PartyGirlDialogue", Main.npc[partyGirl].GivenName));
             }
             int guide = NPC.FindFirstNPC(NPCID.Guide);
-            chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.StandardDialogue1"));
-            chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.StandardDialogue2"));
-            chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.StandardDialogue3", Main.npc[guide].GivenName));
-            chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.CommonDialogue"), 5.0);
-            chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.RareDialogue"), 0.1);
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue1"));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue2"));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue3", Main.npc[guide].GivenName));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.CommonDialogue"), 5.0);
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.RareDialogue"), 0.1);
 
             NumberOfTimesTalkedTo++;
             if (NumberOfTimesTalkedTo >= 10)
             {
-                chat.Add(Language.GetTextValue("Mods.Overthrown.Dialogue.Torch.TalkALot"));
+                chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.TalkALot"));
             }
 
             return chat;
@@ -172,14 +172,14 @@ namespace Overthrown.Content.NPCs.TownNPCs
         public Asset<Texture2D> GetTextureNPCShouldUse(NPC npc)
         {
             if (npc.IsABestiaryIconDummy && !npc.ForcePartyHatOn)
-                return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/TownNPCs/Torch");
+                return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch");
 
             if (npc.altTexture == 1)
-                return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/TownNPCs/Torch_Party");
+                return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch_Party");
 
-            return ModContent.Request<Texture2D>("Overthrown/Content/NPCs/TownNPCs/Torch");
+            return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch");
         }
 
-        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Overthrown/Content/NPCs/TownNPCs/Torch_Head");
+        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Egoteric/Content/NPCs/TownNPCs/Torch_Head");
     }
 }

@@ -2,9 +2,9 @@
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Overthrown.Content.Rarities;
+using Egoteric.Content.Rarities;
 
-namespace Overthrown.Content.Items.Armor.Vanity
+namespace Egoteric.Content.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Legs)]
     public class PyxlLegs : ModItem

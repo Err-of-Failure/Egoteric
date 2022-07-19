@@ -5,9 +5,9 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Overthrown.Content.Items.Weapons.Throwables;
+using Egoteric.Content.Items.Weapons.Throwables;
 
-namespace Overthrown.Content.Projectiles
+namespace Egoteric.Content.Projectiles
 {
     public class Solved : ModProjectile
     {
@@ -26,10 +26,11 @@ namespace Overthrown.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
+            Projectile.penetrate = -1;
 
             AIType = ProjectileID.ThrowingKnife;
         }
-        public override string Texture => "Overthrown/Content/Items/Weapons/Throwables/PuzzleCube";
+        public override string Texture => "Egoteric/Content/Items/Weapons/Throwables/PuzzleCube";
     }
     public class Checkerboard : ModProjectile
     {
@@ -48,10 +49,11 @@ namespace Overthrown.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
+            Projectile.penetrate = -1;
 
             AIType = ProjectileID.ThrowingKnife;
         }
-        public override string Texture => "Overthrown/Content/Items/Weapons/Throwables/PuzzleCube_Checkerboard";
+        public override string Texture => "Egoteric/Content/Items/Weapons/Throwables/PuzzleCube_Checkerboard";
     }
     public class Dots : ModProjectile
     {
@@ -70,10 +72,11 @@ namespace Overthrown.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
+            Projectile.penetrate = -1;
 
             AIType = ProjectileID.ThrowingKnife;
         }
-        public override string Texture => "Overthrown/Content/Items/Weapons/Throwables/PuzzleCube_Dots";
+        public override string Texture => "Egoteric/Content/Items/Weapons/Throwables/PuzzleCube_Dots";
     }
     public class Superflip : ModProjectile
     {
@@ -92,9 +95,10 @@ namespace Overthrown.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
+            Projectile.penetrate = -1;
 
             AIType = ProjectileID.ThrowingKnife;
         }
-        public override string Texture => "Overthrown/Content/Items/Weapons/Throwables/PuzzleCube_Superflip";
+        public override string Texture => "Egoteric/Content/Items/Weapons/Throwables/PuzzleCube_Superflip";
     }
 }

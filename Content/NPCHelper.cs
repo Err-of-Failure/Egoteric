@@ -7,10 +7,10 @@ using Terraria.ID;
 using Terraria.Chat;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using Overthrown.Content.NPCs;
+using Egoteric.Content.NPCs;
 using Terraria.Localization;
 
-namespace Overthrown.Content
+namespace Egoteric.Content
 {
 	/// <summary>
 	/// NPCHelper is a small class that "automates" many repeated things for the Town NPCs.
@@ -18,7 +18,7 @@ namespace Overthrown.Content
 	public class NPCHelper
 	{
 		/// Mod name
-		private static readonly string mod = ModContent.GetInstance<Overthrown>().Name;
+		private static readonly string mod = ModContent.GetInstance<Egoteric>().Name;
 
 		/// <summary>
 		/// Automatically gets the localized Loved text for the Bestiary.
@@ -37,7 +37,7 @@ namespace Overthrown.Content
 		/// <returns>string</returns>
 		public static string LikeText(string npc)
 		{
-			return "[c/ddf2b3:" + Language.GetTextValue("Mods.Overthrown.UI.Like") + "]: " + Language.GetTextValue("Mods." + mod + ".Bestiary.Happiness." + npc + ".Like") + "\n";
+			return "[c/ddf2b3:" + Language.GetTextValue("Mods.Egoteric.UI.Like") + "]: " + Language.GetTextValue("Mods." + mod + ".Bestiary.Happiness." + npc + ".Like") + "\n";
 		}
 
 		/// <summary>
@@ -47,7 +47,7 @@ namespace Overthrown.Content
 		/// <returns>string</returns>
 		public static string DislikeText(string npc)
 		{
-			return "[c/f2e0b3:" + Language.GetTextValue("Mods.Overthrown.UI.Dislike") + "]: " + Language.GetTextValue("Mods." + mod + ".Bestiary.Happiness." + npc + ".Dislike") + "\n";
+			return "[c/f2e0b3:" + Language.GetTextValue("Mods.Egoteric.UI.Dislike") + "]: " + Language.GetTextValue("Mods." + mod + ".Bestiary.Happiness." + npc + ".Dislike") + "\n";
 		}
 
 		/// <summary>

@@ -8,10 +8,10 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using Overthrown.Content.Rarities;
-using Overthrown.World;
+using Egoteric.Content.Rarities;
+using Egoteric.World;
 
-namespace Overthrown.Content.Items.StructureCreation
+namespace Egoteric.Content.Items.StructureCreation
 {
     internal class SaveStructure : ModItem
     {

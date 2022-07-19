@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Overthrown.Content.Rarities
+namespace Egoteric.Content.Rarities
 {
     public class PyxlBaseRarity : ModRarity
     {

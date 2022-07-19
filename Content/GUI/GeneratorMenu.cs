@@ -11,11 +11,11 @@ using Terraria;
 using Terraria.ModLoader.IO;
 using Terraria.ModLoader;
 using Terraria.GameContent.UI.Elements;
-using Overthrown.Content.Items.StructureCreation;
-using Overthrown.World;
+using Egoteric.Content.Items.StructureCreation;
+using Egoteric.World;
 using System.IO;
 
-namespace Overthrown.Content.GUI
+namespace Egoteric.Content.GUI
 {
     internal class GeneratorMenu : UIState
     {
@@ -29,9 +29,9 @@ namespace Overthrown.Content.GUI
         public static UIList structureElements = new UIList();
         public static UIScrollbar scrollBar = new UIScrollbar();
 
-        public static UIImageButton refreshButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Refresh"));
-        public static UIImageButton ignoreButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Null"));
-        public static UIImageButton closeButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/RedX"));
+        public static UIImageButton refreshButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Refresh"));
+        public static UIImageButton ignoreButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Null"));
+        public static UIImageButton closeButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/RedX"));
 
         public static void LoadStructures()
         {
@@ -132,7 +132,7 @@ namespace Overthrown.Content.GUI
 
             if (!ignoreNulls)
             {
-                var tex = ModContent.Request<Texture2D>("Overthrown/Content/GUI/RedX").Value;
+                var tex = ModContent.Request<Texture2D>("Egoteric/Content/GUI/RedX").Value;
                 spriteBatch.Draw(tex, ignoreButton.GetDimensions().ToRectangle(), ignoreButton.IsMouseHovering ? Color.White : Color.White * 0.5f);
             }
         }
@@ -155,7 +155,7 @@ namespace Overthrown.Content.GUI
 
         public static void DrawBox(SpriteBatch sb, Rectangle target, Color color = default)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("Overthrown/Content/GUI/Box").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("Egoteric/Content/GUI/Box").Value;
 
             if (color == default)
                 color = new Color(49, 84, 141) * 0.8f;
@@ -230,7 +230,7 @@ namespace Overthrown.Content.GUI
             GeneratorMenu.multiIndex = 0;
 
             if (!StructureGenerator.StructureDataCache.ContainsKey(Path))
-                StructureGenerator.LoadFile(Path, Overthrown.Instance, true);
+                StructureGenerator.LoadFile(Path, Egoteric.Instance, true);
 
             if (StructureGenerator.StructureDataCache[Path].ContainsKey("Structures"))
             {

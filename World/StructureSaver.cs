@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace Overthrown.World
+namespace Egoteric.World
 {
     internal class StructureSaver
     {
@@ -45,7 +45,7 @@ namespace Overthrown.World
 
             TagCompound tag = new TagCompound();
             tag.Add("Structures", toSave);
-            tag.Add("Version", Overthrown.Instance.Version.ToString());
+            tag.Add("Version", Egoteric.Instance.Version.ToString());
 
             TagIO.ToFile(tag, thisPath);
 
@@ -54,7 +54,7 @@ namespace Overthrown.World
         public unsafe static TagCompound SaveStructure(Rectangle target)
         {
             TagCompound tag = new TagCompound();
-            tag.Add("Version", Overthrown.Instance.Version.ToString());
+            tag.Add("Version", Egoteric.Instance.Version.ToString());
             tag.Add("Width", target.Width);
             tag.Add("Height", target.Height);
 

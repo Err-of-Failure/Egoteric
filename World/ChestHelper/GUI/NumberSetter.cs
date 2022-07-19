@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Overthrown.Content.GUI;
+using Egoteric.Content.GUI;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.ModLoader;
 using Terraria.UI;
 using static Terraria.ModLoader.ModContent;
 
-namespace Overthrown.World.ChestHelper.GUI
+namespace Egoteric.World.ChestHelper.GUI
 {
     internal class NumberSetter : UIElement
     {
@@ -20,8 +20,8 @@ namespace Overthrown.World.ChestHelper.GUI
         string Text;
         string Suffix;
 
-        UIImageButton IncrementButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Up"));
-        UIImageButton DecrementButton = new UIImageButton(ModContent.Request<Texture2D>("Overthrown/Content/GUI/Down"));
+        UIImageButton IncrementButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Up"));
+        UIImageButton DecrementButton = new UIImageButton(ModContent.Request<Texture2D>("Egoteric/Content/GUI/Down"));
 
         public NumberSetter(int value, string text, int xOff, string suffix = "")
         {

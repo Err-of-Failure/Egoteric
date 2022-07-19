@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace Overthrown.World.ChestHelper
+namespace Egoteric.World.ChestHelper
 {
     //This is all copied from Structure Helper sadly, but it only because we didn't want to have a need to install Structure Helper just to use our mod.
     class ChestEntity : ModTileEntity
