@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace Egoteric.World
+namespace Egoteric.Common.World
 {
     internal class StructureSaver
     {

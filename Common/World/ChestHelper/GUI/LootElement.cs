@@ -12,9 +12,9 @@ using Terraria.GameContent.UI.Elements;
 using Terraria.ModLoader;
 using Terraria.UI;
 using static Terraria.ModLoader.ModContent;
-using Egoteric.World;
+using Egoteric.Common.World;
 
-namespace Egoteric.World.ChestHelper.GUI
+namespace Egoteric.Common.World.ChestHelper.GUI
 {
     class LootElement : UIElement
     {

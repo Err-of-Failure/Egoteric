@@ -9,9 +9,9 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using System.Linq;
 using Terraria.ID;
-using Egoteric.World.ChestHelper;
+using Egoteric.Common.World.ChestHelper;
 
-namespace Egoteric.World
+namespace Egoteric.Common.World
 {
     //This is all copied from Structure Helper sadly, but it only because we didn't want to have a need to install Structure Helper just to use our mod.
     public static class StructureGenerator

@@ -3,10 +3,13 @@ using Terraria.Audio;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
+using Terraria.DataStructures;
 using Egoteric.Content.Projectiles;
 using Egoteric.Content.Rarities;
 using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Egoteric.Content.Items.Weapons.Throwables
 {
@@ -19,9 +22,7 @@ namespace Egoteric.Content.Items.Weapons.Throwables
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Puzzle Cube");
-            Tooltip.SetDefault("Right Click to switch between different states\n"
-                + CustomTooltip
-                + "\nCurrently Effects do nothing, this is only here as a placeholder");
+            //Tooltip.SetDefault("Right Click to switch between different states\n" + $"{CustomTooltip}" + "\nCurrently Effects do nothing, this is only here as a placeholder");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
         }
 
@@ -49,32 +50,19 @@ namespace Egoteric.Content.Items.Weapons.Throwables
             Item.maxStack = 999;
         }
 
-        public string SetTooltip(int mode)
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            string Text;
+            TooltipLine line = tooltips.FirstOrDefault(x => x.Mod == "Terraria" && x.Name == "Tooltip0");
 
-            if (mode == 0)
+            if (line != null)
             {
-                CustomTooltip = "Solved, Ichor Effect";
+                line.Text = "Right Click to switch between different states\n" + $"{CustomTooltip}" + "\nCurrently Effects do nothing, this is only here as a placeholder";
             }
-            else if (mode == 1)
+            else
             {
-                CustomTooltip = "Checkerboard, Poison Effect";
+                tooltips.Add(new TooltipLine(Mod, "Tooltip0", "Right Click to switch between different states\n" + $"{CustomTooltip}" + "\nCurrently Effects do nothing, this is only here as a placeholder"));
             }
-            else if (mode == 2)
-            {
-                CustomTooltip = "Dots, Cursed Effect";
-            }
-            else if (mode == 3)
-            {
-                CustomTooltip = "Superflip, Fire Effect";
-            }
-
-            Text = "Right Click to switch between different states\n" 
-                + CustomTooltip
-                + "\nCurrently Effects do nothing, this is only here as a placeholder";
-
-            return Text;
+            //base.ModifyTooltips(tooltips);
         }
 
         public override bool CanUseItem(Player player)
@@ -84,8 +72,8 @@ namespace Egoteric.Content.Items.Weapons.Throwables
                 if (Mode == 3)
                 {
                     Path = "Egoteric/Content/Items/Weapons/Throwables/PuzzleCube";
+                    CustomTooltip = "Solved, Ichor Effect";
                     Mode = 0;
-                    SetTooltip(Mode);
                     Item.useAnimation = 12;
                     Item.useTime = 18;
                     Item.noMelee = true;
@@ -100,8 +88,8 @@ namespace Egoteric.Content.Items.Weapons.Throwables
                 else if (Mode == 0)
                 {
                     Path = "Egoteric/Content/Items/Weapons/Throwables/PuzzleCube_Checkerboard";
+                    CustomTooltip = "Checkerboard, Poison Effect";
                     Mode = 1;
-                    SetTooltip(Mode);
                     Item.useAnimation = 12;
                     Item.useTime = 18;
                     Item.noMelee = true;
@@ -116,8 +104,8 @@ namespace Egoteric.Content.Items.Weapons.Throwables
                 else if (Mode == 1)
                 {
                     Path = "Egoteric/Content/Items/Weapons/Throwables/Dots";
+                    CustomTooltip = "Dots, Cursed Effect";
                     Mode = 2;
-                    SetTooltip(Mode);
                     Item.useAnimation = 12;
                     Item.useTime = 18;
                     Item.noMelee = true;
@@ -132,8 +120,8 @@ namespace Egoteric.Content.Items.Weapons.Throwables
                 else if (Mode == 2)
                 {
                     Path = "Egoteric/Content/Items/Weapons/Throwables/Superflip";
+                    CustomTooltip = "Superflip, Fire Effect";
                     Mode = 3;
-                    SetTooltip(Mode);
                     Item.useAnimation = 12;
                     Item.useTime = 18;
                     Item.noMelee = true;

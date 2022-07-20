@@ -11,9 +11,9 @@ using Terraria.GameContent.UI.Elements;
 using Terraria.UI;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using Egoteric.World;
+using Egoteric.Common.World;
 
-namespace Egoteric.World.ChestHelper.GUI
+namespace Egoteric.Common.World.ChestHelper.GUI
 {
     internal class ChestCustomizer : UIState
     {

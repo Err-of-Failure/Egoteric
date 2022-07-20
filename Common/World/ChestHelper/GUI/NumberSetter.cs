@@ -12,7 +12,7 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using static Terraria.ModLoader.ModContent;
 
-namespace Egoteric.World.ChestHelper.GUI
+namespace Egoteric.Common.World.ChestHelper.GUI
 {
     internal class NumberSetter : UIElement
     {

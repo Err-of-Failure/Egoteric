@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Egoteric.World.ChestHelper;
-using Egoteric.World.ChestHelper.GUI;
+using Egoteric.Common.World.ChestHelper;
+using Egoteric.Common.World.ChestHelper.GUI;
 using System;
 using System.Collections.Generic;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Egoteric.Content.Rarities;
-using Egoteric.World;
+using Egoteric.Common.World;
 
 namespace Egoteric.Content.Items.StructureCreation
 {

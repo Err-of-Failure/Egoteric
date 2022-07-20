@@ -11,7 +11,7 @@ using Terraria.DataStructures;
 using System.IO;
 using Terraria.ID;
 using Egoteric.Content.Rarities;
-using Egoteric.World;
+using Egoteric.Common.World;
 
 namespace Egoteric.Content.Items.StructureCreation
 {

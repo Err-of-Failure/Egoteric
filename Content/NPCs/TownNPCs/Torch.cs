@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using Terraria.GameContent;
 using ReLogic.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Terraria.ModLoader.IO;
 
 namespace Egoteric.Content.NPCs.TownNPCs
 {
@@ -17,6 +18,18 @@ namespace Egoteric.Content.NPCs.TownNPCs
     public class Torch : ModNPC
     {
         public int NumberOfTimesTalkedTo = 0;
+
+        public override void SaveData(TagCompound tag)
+        {
+            tag["TimesTalkedToTorch"] = NumberOfTimesTalkedTo;
+            base.SaveData(tag);
+        }
+
+        public override void LoadData(TagCompound tag)
+        {
+            NumberOfTimesTalkedTo = tag.GetInt("TimesTalkedToTorch");
+            base.LoadData(tag);
+        }
 
         public override void SetStaticDefaults()
         {
@@ -174,8 +187,8 @@ namespace Egoteric.Content.NPCs.TownNPCs
             if (npc.IsABestiaryIconDummy && !npc.ForcePartyHatOn)
                 return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch");
 
-            if (npc.altTexture == 1)
-                return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch_Party");
+            //if (npc.altTexture == 1)
+                //return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch_Party");
 
             return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch");
         }

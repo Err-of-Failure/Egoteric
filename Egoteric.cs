@@ -12,8 +12,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using Terraria.GameContent.UI;
 using Egoteric.Content.GUI;
-using Egoteric.World.ChestHelper;
-using Egoteric.World.ChestHelper.GUI;
+using Egoteric.Common.World.ChestHelper;
+using Egoteric.Common.World.ChestHelper.GUI;
 using Egoteric.Content.Items.StructureCreation;
 
 

@@ -12,7 +12,7 @@ using Terraria.ModLoader.IO;
 using Terraria.ModLoader;
 using Terraria.GameContent.UI.Elements;
 using Egoteric.Content.Items.StructureCreation;
-using Egoteric.World;
+using Egoteric.Common.World;
 using System.IO;
 
 namespace Egoteric.Content.GUI

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Egoteric.World
+namespace Egoteric.Common.World
 {
     public static class Helper
     {

@@ -15,9 +15,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Terraria.IO;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures; 
-using Egoteric.World;
+using Egoteric.Common.World;
 
-namespace Egoteric.World
+namespace Egoteric.Common.World
 {
     public class WorldStructures : ModSystem
     {

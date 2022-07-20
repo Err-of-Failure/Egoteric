@@ -6,19 +6,14 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader.IO;
 
-namespace Egoteric.World.ChestHelper
+namespace Egoteric.Common.World.ChestHelper
 {
     //This is all copied from Structure Helper sadly, but it only because we didn't want to have a need to install Structure Helper just to use our mod.
-    class ChestRuleChance : ChestRule
-    {
-        /// <summary>
-        /// the chance for any individual item from this pool to generate, from 0 to 1. (0 = 0%, 1 = 100%) If you want to generate X items from the pool, use ChestRulePool instead. If you want multiple different chances, add another rule of this type.
-        /// </summary>
-        public float chance = 0;
+    class ChestRuleGuaranteed : ChestRule
+    {   
+        public override string Name => "Guaranteed Rule";
 
-        public override string Name => "Chance Rule";
-
-        public override string Tooltip => "Attempts to generate all items in the rule, \nwith a configurable chance to generate each.\nItems are attempted in the order they appear here";
+        public override string Tooltip => "Always generates every item in the rule\nItems are generated in the order they appear here";
 
         public override void PlaceItems(Chest chest, ref int nextIndex)
         {
@@ -26,11 +21,9 @@ namespace Egoteric.World.ChestHelper
 
             for (int k = 0; k < pool.Count; k++)
             {
-                if (WorldGen.genRand.NextFloat(1) <= chance)
-                {
-                    chest.item[nextIndex] = pool[k].GetLoot();
-                    nextIndex++;
-                }
+                if (nextIndex >= 40) return;
+                chest.item[nextIndex] = pool[k].GetLoot();
+                nextIndex++;
             }
         }
 
@@ -38,8 +31,7 @@ namespace Egoteric.World.ChestHelper
         {
             var tag = new TagCompound()
             {
-                {"Type", "Chance"},
-                {"Chance", chance},
+                {"Type", "Guaranteed"},
                 {"Pool", SerializePool()}
             };
 
@@ -48,8 +40,7 @@ namespace Egoteric.World.ChestHelper
 
         public static ChestRule Deserialize(TagCompound tag)
         {
-            var rule = new ChestRuleChance();
-            rule.chance = tag.GetFloat("Chance");
+            var rule = new ChestRuleGuaranteed();
             rule.pool = DeserializePool(tag.GetCompound("Pool"));
 
             return rule;
@@ -57,12 +48,10 @@ namespace Egoteric.World.ChestHelper
 
         public override ChestRule Clone()
         {
-            var clone = new ChestRuleChance();
+            var clone = new ChestRuleGuaranteed();
 
             for (int k = 0; k < pool.Count; k++)
                 clone.pool.Add(pool[k].Clone());
-
-            clone.chance = chance;
 
             return clone;
         }
