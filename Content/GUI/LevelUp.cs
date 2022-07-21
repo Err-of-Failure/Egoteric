@@ -9,7 +9,7 @@ namespace Egoteric.Content.GUI
 {
 	internal class LevelUp : UIState
 	{
-		private static bool Visible;
+		public static bool Visible;
 
 		private UIPanel levelBackground;
 		private UIPanel separator1;
