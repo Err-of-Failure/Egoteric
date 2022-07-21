@@ -63,7 +63,7 @@ namespace Egoteric.Content.GUI
 		public UIFlatPanel()
 		{
 			if (_backgroundTexture == null)
-				_backgroundTexture = (Texture2D)ModContent.Request<Texture2D>("CustomBars/Textures/UI/Blank");
+				_backgroundTexture = (Texture2D)ModContent.Request<Texture2D>("Egoteric/Content/GUI/Box");
 		}
 	}
 
