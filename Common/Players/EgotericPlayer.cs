@@ -7,15 +7,21 @@ using Egoteric.Content.Items.Weapons.Throwables;
 //using Egoteric.Content.Items.Weapons.Summon;
 using Egoteric.Content.Items.Weapons.Melee;
 using Egoteric.Content.Tiles;
+using Egoteric.Content.GUI;
 using System.Collections.Generic;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Linq;
 using Terraria.ModLoader.IO;
+using Terraria.GameInput;
 
 namespace Egoteric.Common.Players
 {
+	/// <summary>
+	/// This mods Player variables.
+	/// </summary>
     public class EgotericPlayer : ModPlayer
     {
 		/// <summary>
@@ -34,9 +40,9 @@ namespace Egoteric.Common.Players
 		public static int skillPoints = 1;
 
 		/// <summary>
-		/// How much XP you need for the next level
+		/// Total EXP needed to get to next level
 		/// </summary>
-		public static int maxEXP = (int)(100 * (0.55 * curLevel));
+		public static int maxEXP = (int)(100 * Math.Pow((0.55 * curLevel), 2));
 
 		/// <summary>
 		/// What upgrades the player has chosen.
@@ -94,5 +100,41 @@ namespace Egoteric.Common.Players
 
 			return Enumerable.Empty<Item>();
 		}
-	}
+
+        public override void ProcessTriggers(TriggersSet triggersSet)
+        {
+            if (EgotericKeybinds.checkCurrentStats.JustPressed)
+            {
+				Main.NewText("Current XP: " + curEXP + "\nTotal XP needed for next level: " + maxEXP + "\nCurrent Level: " + curLevel + "\nSkill Points Availible: " + skillPoints);
+            }
+			if (EgotericKeybinds.addLevel.JustPressed)
+            {
+				Main.NewText("Old Level: " + curLevel);
+				curLevel++;
+				Main.NewText("New Level: " + curLevel);
+            }
+			if (EgotericKeybinds.resetLevel.JustPressed)
+            {
+				Main.NewText("You've just lost " + (curLevel - 1) + " levels!");
+				curLevel = 1;
+            }
+			if (EgotericKeybinds.openUI.JustPressed)
+            {
+				LevelUp.Visible = true;
+            }
+			if (EgotericKeybinds.hideUI.JustPressed)
+			{
+				LevelUp.Visible = false;
+			}
+        }
+
+        public override void PreUpdate()
+        {
+			if (maxEXP != (int)(100 * Math.Pow((0.55 * curLevel), 2)))
+            {
+				maxEXP = (int)(100 * Math.Pow((0.55 * curLevel), 2));
+			}
+            base.PreUpdate();
+        }
+    }
 }

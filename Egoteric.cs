@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Terraria.GameContent.UI;
 using Egoteric.Content.GUI;
+using Egoteric.Common.Players;
 using Egoteric.Common.World.ChestHelper;
 using Egoteric.Common.World.ChestHelper.GUI;
 using Egoteric.Content.Items.StructureCreation;
@@ -21,22 +22,33 @@ namespace Egoteric
 {
 	public class Egoteric : Mod
 	{
+        /// <summary>
+        /// Asset folder path
+        /// </summary>
 		public const string ASSET_PATH = "Egoteric/Assets";
-		public const string STRUCTURE_PATH = "Egoteric/World/Structures";
+        /// <summary>
+        /// Structures folder path
+        /// </summary>
+		public const string STRUCTURE_PATH = "Egoteric/Common/World/Structures";
 
+        /// <summary>
+        /// Custom void currency, if we even use it.
+        /// </summary>
 		public static int VoidCurrencyId;
 
-		public Egoteric() { Instance = this; }
+        public Egoteric() { Instance = this; }
 
 		public static Egoteric Instance { get; set; }
+        
 
-		public override void Load()
+        public override void Load()
 		{
 			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<Content.Items.VoidCrystal>(), 999L, "Mods.Egoteric.Currencies.VoidCurrency"));
 		}
 
         public override void Unload()
-		{ 
+		{
+
         }
     }
 
@@ -48,15 +60,25 @@ namespace Egoteric
         internal static UserInterface ChestMenuUI;
         internal static ChestCustomizer ChestCustomizer;
 
+        internal static UserInterface LevelsUI;
+        internal static LevelUp Levels;
+
         public override void Load()
         {
-            GeneratorMenuUI = new UserInterface();
-            GeneratorMenu = new GeneratorMenu();
-            GeneratorMenuUI.SetState(GeneratorMenu);
+            if (!Main.dedServ)
+            {
+                GeneratorMenuUI = new UserInterface();
+                GeneratorMenu = new GeneratorMenu();
+                GeneratorMenuUI.SetState(GeneratorMenu);
 
-            ChestMenuUI = new UserInterface();
-            ChestCustomizer = new ChestCustomizer();
-            ChestMenuUI.SetState(ChestCustomizer);
+                ChestMenuUI = new UserInterface();
+                ChestCustomizer = new ChestCustomizer();
+                ChestMenuUI.SetState(ChestCustomizer);
+
+                LevelsUI = new UserInterface();
+                Levels = new LevelUp();
+                LevelsUI.SetState(Levels);
+            }
         }
 
         public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
@@ -74,6 +96,12 @@ namespace Egoteric
                     {
                         ChestMenuUI.Update(Main._drawInterfaceGameTime);
                         ChestCustomizer.Draw(Main.spriteBatch);
+                    }
+
+                    if (LevelUp.Visible)
+                    {
+                        LevelsUI.Update(Main._drawInterfaceGameTime);
+                        Levels.Draw(Main.spriteBatch);
                     }
 
                     return true;

@@ -9,7 +9,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.ModLoader.IO;
-using Terraria.ModLoader;
 using Terraria.GameContent.UI.Elements;
 using Egoteric.Content.Items.StructureCreation;
 using Egoteric.Common.World;
