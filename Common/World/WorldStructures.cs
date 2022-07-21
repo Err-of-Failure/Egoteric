@@ -110,7 +110,7 @@ namespace Egoteric.Common.World
 
                 Point16 dimensions = new Point16(0, 0);
 
-                StructureGenerator.GetDimensions("World/Structures/BasicStarterHouse.nbt", Egoteric.Instance, ref dimensions, false);
+                StructureGenerator.GetDimensions("Common/World/Structures/BasicStarterHouse.nbt", Egoteric.Instance, ref dimensions, false);
 
                 if (!WorldStructures.CheckFlat(x, y, dimensions.X, 3))
                     continue;
@@ -128,7 +128,7 @@ namespace Egoteric.Common.World
                 Point16 location = new Point16(x, y - dimensions.Y + 5); //Test2
                 //Point16 location = new Point16(x, y);
 
-                StructureGenerator.GenerateStructure("World/Structures/BasicStarterHouse.nbt", location, Egoteric.Instance, false, false);
+                StructureGenerator.GenerateStructure("Common/World/Structures/BasicStarterHouse.nbt", location, Egoteric.Instance, false, false);
 
                 placed = true;
             }
