@@ -2,26 +2,33 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using System.Linq;
 using Terraria.UI;
-using System.IO;
+using Terraria.GameContent.UI;
+using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.IO;
+using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Terraria.GameContent.UI;
 using Egoteric.Content.GUI;
 using Egoteric.Common.Players;
 using Egoteric.Common.World.ChestHelper;
 using Egoteric.Common.World.ChestHelper.GUI;
 using Egoteric.Content.Items.StructureCreation;
+using Egoteric.Content.Items.Materials;
 
 
 namespace Egoteric
 {
-	public class Egoteric : Mod
+    public class Egoteric : Mod
 	{
+        internal enum MessageType : byte
+        {
+            SyncPlayer,
+            XP
+        }
         /// <summary>
         /// Asset folder path
         /// </summary>
@@ -43,12 +50,34 @@ namespace Egoteric
 
         public override void Load()
 		{
-			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<Content.Items.VoidCrystal>(), 999L, "Mods.Egoteric.Currencies.VoidCurrency"));
+			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<VoidCrystal>(), 999L, "Mods.Egoteric.Currencies.VoidCurrency"));
 		}
 
         public override void Unload()
 		{
 
+        }
+
+        public override void HandlePacket(BinaryReader reader, int whoAmI)
+        {
+            MessageType msgType = (MessageType)reader.ReadByte();
+            byte playernumber = reader.ReadByte();
+            EgotericPlayer examplePlayer = Main.player[playernumber].GetModPlayer<EgotericPlayer>();
+
+            switch (msgType)
+            {
+                case MessageType.SyncPlayer:
+                    examplePlayer.curEXP = reader.ReadInt32();
+                    examplePlayer.curLevel = reader.ReadInt32();
+                    examplePlayer.skillPoints = reader.ReadInt32();
+                    break;
+                case MessageType.XP:
+                    examplePlayer.curEXP = reader.ReadInt32();
+                    break;
+                default:
+                    Logger.WarnFormat("Egoteric: Unknown Message type: {0}", msgType);
+                    break;
+            }
         }
     }
 
@@ -61,7 +90,7 @@ namespace Egoteric
         internal static ChestCustomizer ChestCustomizer;
 
         internal static UserInterface LevelsUI;
-        internal static LevelUp Levels;
+        internal static LevelsScreen Levels;
 
         public override void Load()
         {
@@ -76,7 +105,7 @@ namespace Egoteric
                 ChestMenuUI.SetState(ChestCustomizer);
 
                 LevelsUI = new UserInterface();
-                Levels = new LevelUp();
+                Levels = new LevelsScreen();
                 LevelsUI.SetState(Levels);
             }
         }
@@ -98,7 +127,7 @@ namespace Egoteric
                         ChestCustomizer.Draw(Main.spriteBatch);
                     }
 
-                    if (LevelUp.Visible)
+                    if (LevelsScreen.Visible)
                     {
                         LevelsUI.Update(Main._drawInterfaceGameTime);
                         Levels.Draw(Main.spriteBatch);

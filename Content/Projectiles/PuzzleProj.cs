@@ -26,7 +26,7 @@ namespace Egoteric.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = -1;
+            Projectile.penetrate = 10;
 
             AIType = ProjectileID.ThrowingKnife;
         }
@@ -49,7 +49,7 @@ namespace Egoteric.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = -1;
+            Projectile.penetrate = 10;
 
             AIType = ProjectileID.ThrowingKnife;
         }
@@ -72,7 +72,7 @@ namespace Egoteric.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = -1;
+            Projectile.penetrate = 10;
 
             AIType = ProjectileID.ThrowingKnife;
         }
@@ -95,7 +95,7 @@ namespace Egoteric.Content.Projectiles
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = -1;
+            Projectile.penetrate = 10;
 
             AIType = ProjectileID.ThrowingKnife;
         }

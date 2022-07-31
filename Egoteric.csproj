@@ -15,7 +15,6 @@
     <Folder Include="Assets\Textures\" />
     <Folder Include="Content\Items\Weapons\Magic\" />
     <Folder Include="Content\Items\Weapons\Ranged\" />
-    <Folder Include="Content\Items\Weapons\Summon\" />
     <Folder Include="Content\NPCs\Enemies\" />
   </ItemGroup>
   <ItemGroup>

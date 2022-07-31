@@ -16,33 +16,37 @@ using Terraria.ModLoader;
 using System.Linq;
 using Terraria.ModLoader.IO;
 using Terraria.GameInput;
+using Terraria.Audio;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace Egoteric.Common.Players
 {
 	/// <summary>
 	/// This mods Player variables.
 	/// </summary>
-    public class EgotericPlayer : ModPlayer
-    {
+	public class EgotericPlayer : ModPlayer
+	{
 		/// <summary>
 		/// This tells the current amount of XP a player has stored
 		/// </summary>
-		public static int curEXP = 0;
-
+		public int curEXP = 0;
 		/// <summary>
 		/// The player's current level
 		/// </summary>
-		public static int curLevel = 1;
-
+		public int curLevel = 1;
 		/// <summary>
 		/// How many skill points the player has availible
 		/// </summary>
-		public static int skillPoints = 1;
-
+		public int skillPoints = 0;
+		/// <summary>
+		/// Just used to check for certain algorithms.
+		/// </summary>
+		public int spentSkillPoints = 0;
 		/// <summary>
 		/// Total EXP needed to get to next level
 		/// </summary>
-		public static int maxEXP = (int)(100 * Math.Pow((0.55 * curLevel), 2));
+		public int maxEXP = 100;
 
 		/// <summary>
 		/// What upgrades the player has chosen.
@@ -55,7 +59,24 @@ namespace Egoteric.Common.Players
 		///		<item>UpgradePaths[4] = Throwing Upgrades</item>
 		/// </list>
 		/// </summary>
-		public static int[] UpgradePaths = new int[5];
+		public int[] UpgradePaths = new int[5];
+
+		/// <summary>
+		/// More Minions
+		/// </summary>
+		public int MoreMinions = 0;
+		/// <summary>
+		/// More Flat Damage
+		/// </summary>
+		public float IncreasedDamage = 0f;
+		/// <summary>
+		/// More Flat Defense
+		/// </summary>
+		public int IncreasedDefense = 0;
+		/// <summary>
+		/// More Max Health for the player;
+		/// </summary>
+		public int MaxLife = 0;
 
 		public override void SaveData(TagCompound tag)
         {
@@ -64,6 +85,10 @@ namespace Egoteric.Common.Players
 			tag["curLevel"] = curLevel;
 			tag["skillPoints"] = skillPoints;
 			tag["UpgradePaths"] = UpgradePaths;
+			tag["MoreMinions"] = MoreMinions;
+			tag["IncreasedDamage"] = IncreasedDamage;
+			tag["IncreasedDefense"] = IncreasedDefense;
+			tag["MaxLife"] = MaxLife;
 			base.SaveData(tag);
         }
 
@@ -74,8 +99,17 @@ namespace Egoteric.Common.Players
 			curLevel = tag.GetInt("curLevel");
 			skillPoints = tag.GetInt("skillPoints");
 			UpgradePaths = tag.GetIntArray("UpgradePaths");
-            base.LoadData(tag);
-        }
+			MoreMinions = tag.GetInt("MoreMinions");
+			IncreasedDamage = tag.GetFloat("IncreasedDamage");
+			IncreasedDefense = tag.GetInt("IncreasedDefense");
+			MaxLife = tag.GetInt("MaxLife");
+			base.LoadData(tag);
+
+			if (curEXP > maxEXP)
+			{
+				LevelUp();
+			}
+		}
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
 		{
@@ -105,7 +139,7 @@ namespace Egoteric.Common.Players
         {
             if (EgotericKeybinds.checkCurrentStats.JustPressed)
             {
-				Main.NewText("Current XP: " + curEXP + "\nTotal XP needed for next level: " + maxEXP + "\nCurrent Level: " + curLevel + "\nSkill Points Availible: " + skillPoints);
+				Main.NewText(Player.name + "'s Stats:\n" + "Current XP: " + curEXP + "\nTotal XP needed for next level: " + maxEXP + "\nCurrent Level: " + curLevel + "\nSkill Points Availible: " + skillPoints);
             }
 			if (EgotericKeybinds.addLevel.JustPressed)
             {
@@ -117,24 +151,153 @@ namespace Egoteric.Common.Players
             {
 				Main.NewText("You've just lost " + (curLevel - 1) + " levels!");
 				curLevel = 1;
-            }
+				curEXP = 0;
+				skillPoints = 0;
+				for (int i = 0; i < UpgradePaths.Length; i++)
+                {
+					UpgradePaths[i] = 0;
+                }
+				MoreMinions = 0;
+				IncreasedDamage = 0f;
+				IncreasedDefense = 0;
+			}
 			if (EgotericKeybinds.openUI.JustPressed)
             {
-				LevelUp.Visible = true;
+				if (LevelsScreen.Added == false)
+				{
+					LevelsScreen.AddCharacterImage(Player);
+				}
+				LevelsScreen.Visible = true;
             }
 			if (EgotericKeybinds.hideUI.JustPressed)
 			{
-				LevelUp.Visible = false;
+				LevelsScreen.RemoveCharacterImage(LevelsScreen.playerImage);
+				LevelsScreen.Visible = false;
 			}
         }
 
         public override void PreUpdate()
         {
-			if (maxEXP != (int)(100 * Math.Pow((0.55 * curLevel), 2)))
+			if (maxEXP != (int)(300 * Math.Pow((0.75 * curLevel), 2)))
             {
-				maxEXP = (int)(100 * Math.Pow((0.55 * curLevel), 2));
+				maxEXP = (int)(300 * Math.Pow((0.75 * curLevel), 2));
 			}
-            base.PreUpdate();
+			if (curEXP >= maxEXP)
+				LevelUp();
+			if (curEXP < 0)
+				curEXP = 0;
+
+			if (LevelsScreen.Added == true)
+			{
+				if (Player.velocity.X > 0 || Player.velocity.X < 0 || Player.velocity.Y > 0 || Player.velocity.Y < 0)
+				{
+					LevelsScreen.playerImage.SetAnimated(true);
+				}
+				else
+				{
+					LevelsScreen.playerImage.SetAnimated(false);
+				}
+			}
+
+			base.PreUpdate();
         }
-    }
+
+		public void LevelUp()
+        {
+			curEXP -= maxEXP;
+			curLevel++;
+			Main.NewText("You've leveled up! You are now level " + curLevel + "!", Color.Yellow);
+			skillPoints++;
+			Main.NewText("You currently have " + skillPoints + " skillpoints available!", Color.Blue);
+			if (curEXP < 0)
+				curEXP = 0;
+			if (curEXP >= maxEXP)
+				LevelUp();
+		}
+
+		public void AddXP(int XPToEarn)
+        {
+			curEXP += XPToEarn;
+			if (curEXP >= maxEXP)
+				LevelUp();
+		}
+
+		public void SetXP(float XPToSet)
+        {
+			curEXP = (int)XPToSet;
+		}
+
+		/// <summary>
+		/// <para>The function called upon to spend the skill points a player has</para>
+		/// <para>The class upgrades are listen as follows</para>
+		/// <list type="bullet">
+		///		<item>"Melee" - Melee Class Upgrades</item>
+		///		<item>"Ranged" - Ranged Class Upgrades</item>
+		///		<item>"Magic" - Magic Class Upgrades</item>
+		///		<item>"Summon" - Summoner Class Upgrades</item>
+		///		<item>"Throwing" - Throwing Class Upgrades, more than likely useless for now</item>
+		/// </list>
+		/// <para>Extra, more expensive upgrades (put at least 2 in the <paramref name="skillPointsRequired"/> value</para>
+		/// <list type="bullet">
+		///		<item>"MoreMinions" - Adding 1 more minion to the players minion count</item>
+		///		<item>"IncreasedDamage" - Increases flat damage value</item>
+		///		<item>"IncreasedDefense" - Increases flat defense value</item>
+		///		<item>"MaxLife" - Increases max life value (WILL have a cap at 20 upgrades, 1 per heart)</item>
+		/// </list>
+		/// </summary>
+		/// <param name="UpgradeID">The ID of the Upgrade you need</param>
+		/// <param name="skillPointsRequired">The amount of skillpoints required to spend</param>
+		public void SpendSkillPoint(string UpgradeID, int skillPointsRequired = 1)
+        {
+			if ((skillPoints - skillPointsRequired) >= 0)
+			{
+				skillPoints -= skillPointsRequired;
+				spentSkillPoints += skillPointsRequired;
+			}
+
+			switch (UpgradeID)
+            {
+				case "Melee":
+					UpgradePaths[0]++;
+					break;
+				case "Ranged":
+					UpgradePaths[1]++;
+					break;
+				case "Magic":
+					UpgradePaths[2]++;
+					break;
+				case "Summon":
+					UpgradePaths[3]++;
+					break;
+				case "Throwing":
+					UpgradePaths[4]++;
+					break;
+				case "MoreMinions":
+					MoreMinions++;
+					break;
+				case "IncreasedDamage":
+					IncreasedDamage++;
+					break;
+				case "IncreasedDefense":
+					IncreasedDefense++;
+					break;
+				case "MaxLife":
+					MaxLife++;
+					break;
+				default:
+					break;
+            }
+        }
+
+        public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
+        {
+			ModPacket packet = Mod.GetPacket();
+			packet.Write((byte)Egoteric.MessageType.SyncPlayer);
+			packet.Write((byte)Player.whoAmI);
+			packet.Write(curEXP);
+			packet.Write(curLevel);
+			packet.Write(skillPoints);
+			packet.Send(toWho, fromWho);
+		}
+	}
 }

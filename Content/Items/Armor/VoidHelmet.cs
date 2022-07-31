@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Egoteric.Content.DamageClasses;
 using Egoteric.Content.Rarities;
+using Egoteric.Content.Items.Materials;
 
 namespace Egoteric.Content.Items.Armor
 {

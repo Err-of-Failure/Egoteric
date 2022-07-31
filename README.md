@@ -6,3 +6,6 @@ Github hella dumb sometimes fr fr
 
 To actually start a description:
 This is a Terraria Mod that srives to...
+## Features
+ - Leveling System
+ - ...
