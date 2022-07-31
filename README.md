@@ -7,7 +7,12 @@ Github hella dumb sometimes fr fr
 To actually start a description:
 This is a Terraria Mod that srives to...
 ## Features
- - Leveling System
+##### Checked means implemented, unchecked means being worked on
+ - [x] Leveling System
+ - [ ] Upgrade Tree
+ - [ ] Story/Lore
+ - [ ] New NPCs
+ - [ ] Brand New Items
  - ...
 
 ## Credits
