@@ -12,7 +12,12 @@ namespace Egoteric.Content.Items
 {
     public class FunniJokeItem : ModItem
     {
-        //https://www.youtube.com/watch?v=dQw4w9WgXcQ
+        private string FunniLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        private string OpenLinkCommand = "/C Start ";
+        private void OpenLink(string Link)
+        {
+            Process.Start("cmd.exe", OpenLinkCommand + Link);
+        }
 
         public override string Texture => "Egoteric/Content/Items/DevItem";
         public override void SetStaticDefaults()
@@ -42,7 +47,7 @@ namespace Egoteric.Content.Items
         }
         public override bool? UseItem(Player player)
         {
-            Process.Start("cmd.exe", "Start https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            OpenLink(FunniLink);
             return base.UseItem(player);
         }
     }
