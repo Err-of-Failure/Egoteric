@@ -19,7 +19,6 @@ using Egoteric.Common.World.ChestHelper.GUI;
 using Egoteric.Content.Items.StructureCreation;
 using Egoteric.Content.Items.Materials;
 
-
 namespace Egoteric
 {
     public class Egoteric : Mod

@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\tModLoader.targets" />
   <PropertyGroup>
-    <AssemblyName>Overthrown</AssemblyName>
+    <AssemblyName>Egoteric</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>latest</LangVersion>
@@ -16,10 +16,5 @@
     <Folder Include="Content\Items\Weapons\Magic\" />
     <Folder Include="Content\Items\Weapons\Ranged\" />
     <Folder Include="Content\NPCs\Enemies\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="StructureHelper">
-      <HintPath>..\Mod Libraries\StructureHelper_v2.0.7.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>
