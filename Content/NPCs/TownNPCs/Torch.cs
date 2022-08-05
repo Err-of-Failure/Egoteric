@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -6,11 +7,12 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Personalities;
-using System.Collections.Generic;
+using Terraria.Audio;
 using Terraria.GameContent;
+using Terraria.ModLoader.IO;
+using Terraria.UI;
 using ReLogic.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Terraria.ModLoader.IO;
 
 namespace Egoteric.Content.NPCs.TownNPCs
 {
@@ -18,6 +20,7 @@ namespace Egoteric.Content.NPCs.TownNPCs
     public class Torch : ModNPC
     {
         public int NumberOfTimesTalkedTo = 0;
+        private bool soundPlayed = false;
 
         public override void SaveData(TagCompound tag)
         {
@@ -118,7 +121,7 @@ namespace Egoteric.Content.NPCs.TownNPCs
             int guide = NPC.FindFirstNPC(NPCID.Guide);
             chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue1"));
             chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue2"));
-            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue3", Main.npc[guide].GivenName));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.GuideDialogue", Main.npc[guide].GivenName));
             chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.CommonDialogue"), 5.0);
             chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.RareDialogue"), 0.1);
 
@@ -127,7 +130,6 @@ namespace Egoteric.Content.NPCs.TownNPCs
             {
                 chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.TalkALot"));
             }
-
             return chat;
         }
 

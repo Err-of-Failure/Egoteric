@@ -11,9 +11,9 @@
 		Dialogue: {
 			Torch: {
 				PartyGirlDialogue: I enjoy the parties that {0} throws. Brings me some sort of happiness.
-				StandardDialogue1: I have a sound I like making. Weh!
+				StandardDialogue1: I have a sound that I like making. Weh!
 				StandardDialogue2: Dang, I'm kind of bored just walking around a house. What if we went on an adventure?
-				StandardDialogue3: Ya'know, sometimes, I wonder what is going on inside of {0}'s head. I mean, he has to go crazy trying to remember EVERY recipe right?
+				GuideDialogue: Ya'know, sometimes, I wonder what's going on inside of {0}'s head. I mean, he has to go crazy trying to remember EVERY recipe right?
 				CommonDialogue: Hey, how's it going? I feel like going for a walk later.
 				RareDialogue: You know, I often wonder how the others are doing, I mean, sometimes we miss our original homes.
 				TalkALot: Jeez, I know I am talkative but you don't have to talk to me this much!
