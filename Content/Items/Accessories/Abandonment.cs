@@ -31,42 +31,42 @@ namespace Egoteric.Content.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			//Base Damage (Percentage)
-			player.GetDamage(DamageClass.Magic) -= 0.5f;
-			player.GetDamage(DamageClass.Melee) -= 0.5f;
-			player.GetDamage(DamageClass.Ranged) -= 0.5f;
-			player.GetDamage(DamageClass.Summon) += 1f;
-			player.GetDamage(DamageClass.Throwing) -= 0.5f;
+			player.GetDamage(DamageClass.Magic) *= 0.5f;
+			player.GetDamage(DamageClass.Summon) *= 2.0f;
+			player.GetDamage(DamageClass.Ranged) *= 0.5f;
+			player.GetDamage(DamageClass.Throwing) *= 0.5f;
+			player.GetDamage(DamageClass.Melee) *= 0.5f;
 
 			//Crit Chance (Int)
-			player.GetCritChance(DamageClass.Summon) += 20f;
-			player.GetCritChance(DamageClass.Magic) -= 10f;
-			player.GetCritChance(DamageClass.Melee) -= 10f;
-			player.GetCritChance(DamageClass.Ranged) -= 10f;
-			player.GetCritChance(DamageClass.Throwing) -= 10f;
+			player.GetCritChance(DamageClass.Magic) *= 0.75f;
+			player.GetCritChance(DamageClass.Summon) *= 1.5f;
+			player.GetCritChance(DamageClass.Ranged) *= 0.75f;
+			player.GetCritChance(DamageClass.Throwing) *= 0.75f;
+			player.GetCritChance(DamageClass.Melee) *= 0.75f;
 
 			//Attack Speed (Percentage)
-			player.GetAttackSpeed(DamageClass.Ranged) -= 0.25f;
-			player.GetAttackSpeed(DamageClass.Magic) -= 0.25f;
-			player.GetAttackSpeed(DamageClass.Melee) -= 0.25f;
-			player.GetAttackSpeed(DamageClass.Summon) += 0.5f;
-			player.GetAttackSpeed(DamageClass.Throwing) -= 0.25f;
+			player.GetAttackSpeed(DamageClass.Magic) *= 0.75f;
+			player.GetAttackSpeed(DamageClass.Summon) *= 1.5f;
+			player.GetAttackSpeed(DamageClass.Ranged) *= 0.75f;
+			player.GetAttackSpeed(DamageClass.Throwing) *= 0.75f;
+			player.GetAttackSpeed(DamageClass.Melee) *= 0.75f;
 
 			//Armor Penetration (Int)
-			player.GetArmorPenetration(DamageClass.Magic) -= 10f;
-			player.GetArmorPenetration(DamageClass.Throwing) -= 10f;
-			player.GetArmorPenetration(DamageClass.Melee) -= 10f;
-			player.GetArmorPenetration(DamageClass.Ranged) -= 10f;
-			player.GetArmorPenetration(DamageClass.Summon) += 20f;
+			player.GetArmorPenetration(DamageClass.Magic) *= 0.75f;
+			player.GetArmorPenetration(DamageClass.Summon) *= 1.5f;
+			player.GetArmorPenetration(DamageClass.Ranged) *= 0.75f;
+			player.GetArmorPenetration(DamageClass.Throwing) *= 0.75f;
+			player.GetArmorPenetration(DamageClass.Melee) *= 0.75f;
 
 			//Knockback (Percentage)
-			player.GetKnockback(DamageClass.Magic) -= 0.5f;
-			player.GetKnockback(DamageClass.Throwing) -= 0.5f;
-			player.GetKnockback(DamageClass.Melee) -= 0.5f;
-			player.GetKnockback(DamageClass.Ranged) -= 0.5f;
-			player.GetKnockback(DamageClass.Summon) += 1f;
+			player.GetKnockback(DamageClass.Magic) *= 0.5f;
+			player.GetKnockback(DamageClass.Summon) *= 2.0f;
+			player.GetKnockback(DamageClass.Ranged) *= 0.5f;
+			player.GetKnockback(DamageClass.Throwing) *= 0.5f;
+			player.GetKnockback(DamageClass.Melee) *= 0.5f;
 
 			//Summon Class Exclusive
-			player.maxMinions += 10;
+			player.maxMinions += 10; //Will more than likely be changed to a changing value later on
         }
 
         public override bool CanEquipAccessory(Player player, int slot, bool modded)
