@@ -17,4 +17,4 @@ This is a Terraria Mod that srives to...
 
 ## Credits
 - Merricide - Concept Creator, Asset Artist - [GitHub](https://github.com/Merricide)
-- TorchTheDragon - Programmer - [GitHub](https://github.com/TorchTheDragon), [Discord Server](https://discord.gg/XBFqJk7Vtp), [Twitter](https://twitter.com/TorchTheDwagon)
+- TorchTheDragon - Programmer - [GitHub](https://github.com/TorchTheDragon), [Discord Server](https://discord.gg/XBFqJk7Vtp), [Twitter](https://twitter.com/TorchTheDwagon), [YouTube](https://www.youtube.com/@TorchTheDragon)
