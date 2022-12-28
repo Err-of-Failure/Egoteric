@@ -8,7 +8,7 @@ To actually start a description:
 This is a Terraria Mod that srives to...
 ## Features
 ##### Checked means implemented, unchecked means being worked on
- - [x] Leveling System
+ - [ ] Leveling System (Technically implemented, but needs to be rewritten)
  - [ ] Upgrade Tree
  - [ ] Story/Lore
  - [ ] New NPCs
