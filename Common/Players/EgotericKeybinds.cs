@@ -36,22 +36,13 @@ namespace Egoteric.Common.Players
 		public static ModKeybind resetLevel { get; private set; }
 		/// <summary>
 		///		<para>
-		///		Opens UI
+		///		Opens and Closes UI
 		///		</para>
 		///		<para>
 		///		Dev Keybind
 		///		</para> 
 		/// </summary>
 		public static ModKeybind openUI { get; private set; }
-		/// <summary>
-		///		<para>
-		///		Closes UI
-		///		</para>
-		///		<para>
-		///		Dev Keybind
-		///		</para> 
-		/// </summary>
-		public static ModKeybind hideUI { get; private set; }
 
 		public override void Load()
 		{
@@ -59,8 +50,7 @@ namespace Egoteric.Common.Players
 			addLevel = KeybindLoader.RegisterKeybind(Mod, "Add a Level", "L");
 			resetLevel = KeybindLoader.RegisterKeybind(Mod, "Reset Levels", "OemSemicolon");
 
-			openUI = KeybindLoader.RegisterKeybind(Mod, "Opens Level UI", "L");
-			hideUI = KeybindLoader.RegisterKeybind(Mod, "Closes UI", "O");
+			openUI = KeybindLoader.RegisterKeybind(Mod, "Opens and Closes Level UI", "L");
 		}
 
 		public override void Unload()
@@ -70,7 +60,6 @@ namespace Egoteric.Common.Players
 			resetLevel = null;
 
 			openUI = null;
-			hideUI = null;
 		}
 	}
 }

@@ -28,7 +28,8 @@ namespace Egoteric.Common.World
             {
                 return;
             }
-            tasks.Insert(GenIndex + 1, new TestHouseGen("TestStructure", 100f));
+            // Uncomment the line under this to reimplement structure generation
+            //tasks.Insert(GenIndex + 1, new TestHouseGen("TestStructure", 100f));
         }
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace Egoteric.Common.World
             return totalVariance / width <= threshold;
         }
     }
+
     public class TestHouseGen : GenPass
     {
         public TestHouseGen(string name, float loadWeight) : base(name, loadWeight) {

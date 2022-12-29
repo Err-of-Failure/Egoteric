@@ -5,7 +5,7 @@ using Egoteric.Content.Items.Armor.Vanity;
 using Egoteric.Content.Items.Weapons.Throwables;
 //using Egoteric.Content.Items.Weapons.Ranged;
 //using Egoteric.Content.Items.Weapons.Summon;
-using Egoteric.Content.Items.Weapons.Melee;
+//using Egoteric.Content.Items.Weapons.Melee;
 using Egoteric.Content.Tiles;
 using Egoteric.Content.GUI;
 using System.Collections.Generic;
@@ -126,9 +126,9 @@ namespace Egoteric.Common.Players
             {
 				return new[]
 				{
-					new Item(ModContent.ItemType<TorchHead>()),
-					new Item(ModContent.ItemType<TorchHoodie>()),
-					new Item(ModContent.ItemType<TorchShorts>())
+					new Item(ModContent.ItemType<RetroTorchHead>()),
+					new Item(ModContent.ItemType<RetroTorchHoodie>()),
+					new Item(ModContent.ItemType<RetroTorchShorts>())
 				};
             }
 

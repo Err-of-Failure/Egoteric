@@ -17,10 +17,9 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Egoteric.Content.NPCs.TownNPCs
 {
     [AutoloadHead]
-    public class Torch : ModNPC
+    public class RetroTorch : ModNPC
     {
         public int NumberOfTimesTalkedTo = 0;
-        private bool soundPlayed = false;
 
         public override void SaveData(TagCompound tag)
         {
@@ -36,7 +35,7 @@ namespace Egoteric.Content.NPCs.TownNPCs
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Torch");
+            DisplayName.SetDefault("Retro Torch");
             Main.npcFrameCount[Type] = 26;
             NPCID.Sets.ExtraFramesCount[Type] = 9;
             NPCID.Sets.AttackFrameCount[Type] = 5;
@@ -89,6 +88,7 @@ namespace Egoteric.Content.NPCs.TownNPCs
 
         public override void OnKill()
         {
+            
             //Edit this once "Gore" is made
         }
 
@@ -106,7 +106,7 @@ namespace Egoteric.Content.NPCs.TownNPCs
 
         public override ITownNPCProfile TownNPCProfile()
         {
-            return new TorchProfile();
+            return new RetroTorchProfile();
         }
 
         public override string GetChat()
@@ -116,19 +116,19 @@ namespace Egoteric.Content.NPCs.TownNPCs
             int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
             if (partyGirl >= 0 && Main.rand.NextBool(4))
             {
-                chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.PartyGirlDialogue", Main.npc[partyGirl].GivenName));
+                chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.PartyGirlDialogue", Main.npc[partyGirl].GivenName));
             }
             int guide = NPC.FindFirstNPC(NPCID.Guide);
-            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue1"));
-            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.StandardDialogue2"));
-            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.GuideDialogue", Main.npc[guide].GivenName));
-            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.CommonDialogue"), 5.0);
-            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.RareDialogue"), 0.1);
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.StandardDialogue1"));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.StandardDialogue2"));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.GuideDialogue", Main.npc[guide].GivenName));
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.CommonDialogue"), 5.0);
+            chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.RareDialogue"), 0.1);
 
             NumberOfTimesTalkedTo++;
             if (NumberOfTimesTalkedTo >= 10)
             {
-                chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.Torch.TalkALot"));
+                chat.Add(Language.GetTextValue("Mods.Egoteric.Dialogue.RetroTorch.TalkALot"));
             }
             return chat;
         }
@@ -148,13 +148,14 @@ namespace Egoteric.Content.NPCs.TownNPCs
 
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
-            shop.item[nextSlot++].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.TorchHead>());
-            shop.item[nextSlot++].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.TorchHoodie>());
-            shop.item[nextSlot++].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.TorchShorts>());
+            shop.item[nextSlot++].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.RetroTorchHead>());
+            shop.item[nextSlot++].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.RetroTorchHoodie>());
+            shop.item[nextSlot++].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.RetroTorchShorts>());
         }
 
         public override bool CanGoToStatue(bool toKingStatue) => true;
-
+        
+        /*
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {
             damage = 20;
@@ -178,8 +179,9 @@ namespace Egoteric.Content.NPCs.TownNPCs
             multiplier = 12f;
             randomOffset = 2f;
         }
+        */
     }
-    public class TorchProfile : ITownNPCProfile
+    public class RetroTorchProfile : ITownNPCProfile
     {
         public int RollVariation() => 0;
         public string GetNameForVariant(NPC npc) => null;
@@ -187,14 +189,16 @@ namespace Egoteric.Content.NPCs.TownNPCs
         public Asset<Texture2D> GetTextureNPCShouldUse(NPC npc)
         {
             if (npc.IsABestiaryIconDummy && !npc.ForcePartyHatOn)
-                return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch");
+                return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/RetroTorch");
 
-            //if (npc.altTexture == 1)
-                //return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch_Party");
+            /*
+            if (npc.altTexture == 1)
+                return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch_Party");
+            */
 
-            return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/Torch");
+            return ModContent.Request<Texture2D>("Egoteric/Content/NPCs/TownNPCs/RetroTorch");
         }
 
-        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Egoteric/Content/NPCs/TownNPCs/Torch_Head");
+        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Egoteric/Content/NPCs/TownNPCs/RetroTorch_Head");
     }
 }

@@ -1,15 +1,19 @@
 ﻿Mods: {
 	Egoteric: {
-		Currencies: {
-			VoidCurrency: Void Crystals
-		}
-
-		DamageClassName: {
-			Void: void damage
+		Config: {
+			ExpValues: {
+				MainHeader: Exp Values
+				BossExp: Boss EXP
+				BossTooltip: Multiplier for the amount of EXP to earn from Boss Enemies
+				NormalExp: Base EXP
+				NormalTooltip: Multiplier for the amount of EXP to earn from basic Enemies
+				EvilExp: Evil Exp
+				EvilTooltip: Negative Multiplier for the amount of EXP to lose from killing Friendlies
+			}
 		}
 
 		Dialogue: {
-			Torch: {
+			RetroTorch: {
 				PartyGirlDialogue: I enjoy the parties that {0} throws. Brings me some sort of happiness.
 				StandardDialogue1: I have a sound that I like making. Weh!
 				StandardDialogue2: Dang, I'm kind of bored just walking around a house. What if we went on an adventure?
@@ -21,7 +25,7 @@
 		}
 
 		TownNPCMood: {
-			Torch: {
+			RetroTorch: {
 				Content: I feel happy right now, wanna chat?
 				NoHome: Can I have a house? I don't like spending my nights sleeping out here.
 				LoveSpace: There is so much room to do my own stuff here!

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Egoteric.Common.Players;
+using Egoteric.Common.Configs;
 
 namespace Egoteric.Common.Players
 {
@@ -20,15 +21,15 @@ namespace Egoteric.Common.Players
             {
                 if (npc.boss)
                 {
-                    XPToEarn = (npc.lifeMax * 1.5f); //Multiplied values will soon be swapped to a configurable number
+                    XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().BossMultiplier);
                 }
                 else if (!npc.friendly)
                 {
-                    XPToEarn = (npc.lifeMax * 1f);
+                    XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().NormalMultiplier);
                 }
                 else if (npc.friendly)
                 {
-                    XPToEarn = -npc.lifeMax * 1f;
+                    XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().EvilMultiplier);
                 }
             }
 

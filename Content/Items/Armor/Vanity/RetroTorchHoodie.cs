@@ -6,20 +6,20 @@ using Egoteric.Content.Rarities;
 
 namespace Egoteric.Content.Items.Armor.Vanity
 {
-	[AutoloadEquip(EquipType.Head)]
-	public class TorchHead : ModItem
+	[AutoloadEquip(EquipType.Body)]
+	public class RetroTorchHoodie : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Torch's Head");
-			Tooltip.SetDefault("The replica head of a friendly dragon"); 
+			DisplayName.SetDefault("Retro Torch's Hoodie");
+			Tooltip.SetDefault("Hood not included");
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
 		{
 			Item.width = 22;
-			Item.height = 28;
+			Item.height = 22;
 
 			Item.value = Item.sellPrice(gold: 1);
 			Item.rare = ModContent.RarityType<VidiaHigherRarity>();

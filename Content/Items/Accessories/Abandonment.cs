@@ -66,7 +66,7 @@ namespace Egoteric.Content.Items.Accessories
 			player.GetKnockback(DamageClass.Melee) *= 0.5f;
 
 			//Summon Class Exclusive
-			player.maxMinions += 10; //Will more than likely be changed to a changing value later on
+			player.maxMinions += 10; //Will more than likely be changed to a public int value later on
         }
 
         public override bool CanEquipAccessory(Player player, int slot, bool modded)

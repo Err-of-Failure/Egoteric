@@ -39,11 +39,6 @@ namespace Egoteric
         /// </summary>
 		public const string STRUCTURE_PATH = "Egoteric/Common/World/Structures";
 
-        /// <summary>
-        /// Custom void currency, if we even use it.
-        /// </summary>
-		public static int VoidCurrencyId;
-
         public Egoteric() { Instance = this; }
 
 		public static Egoteric Instance { get; set; }
@@ -51,7 +46,7 @@ namespace Egoteric
 
         public override void Load()
 		{
-			VoidCurrencyId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.VoidCurrency(ModContent.ItemType<VoidCrystal>(), 999L, "Mods.Egoteric.Currencies.VoidCurrency"));
+			
 		}
 
         public override void Unload()
@@ -80,36 +75,6 @@ namespace Egoteric
                     break;
             }
         }
-
-        //Below will be functions that other class files can use for some things, not really necessary but I don't feel like typing these out multiple times.
-        /// <summary>
-        /// Just a function to open up links on a players computer
-        /// </summary>
-        /// <param name="Link">The link you wish to open</param>
-        public static void OpenLink(string Link)
-        {
-            Process.Start("cmd.exe", "/C Start " + Link);
-        }
-
-        /// <summary>
-        /// Opens a specified program
-        /// </summary>
-        /// <param name="Program">The program you wish to open</param>
-        /// <returns>The program to use as a variable</returns>
-        public static Process OpenProgram(string Program)
-        {
-            Process program = Process.Start(new ProcessStartInfo(Program));
-            return program;
-        }
-
-        //The three DllImport thingys below are using in combination with the open program thing above
-        [DllImport("user32.dll", EntryPoint = "SetWindowText")]
-        public static extern int SetWindowText(IntPtr hWnd, string text);
-        [DllImport("user32.dll", EntryPoint = "FindWindowEx")]
-        public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
-
-        [DllImport("User32.dll", EntryPoint = "SendMessage")]
-        public static extern int SendMessage(IntPtr hWnd, int uMsg, int wParam, string lParam);
     }
 
     public class UIRenderer : ModSystem

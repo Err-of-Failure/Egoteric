@@ -13,9 +13,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Textures\" />
+    <Folder Include="Content\Buffs\Minions\" />
+    <Folder Include="Content\Currencies\" />
+    <Folder Include="Content\DamageClasses\" />
     <Folder Include="Content\Items\Weapons\Magic\" />
+    <Folder Include="Content\Items\Weapons\Melee\" />
     <Folder Include="Content\Items\Weapons\Ranged\" />
-    <Folder Include="Assets\Sounds\" />
+    <Folder Include="Content\Items\Weapons\Summon\" />
     <Folder Include="Content\NPCs\Enemies\" />
+    <Folder Include="Content\Projectiles\Minions\" />
   </ItemGroup>
 </Project>
