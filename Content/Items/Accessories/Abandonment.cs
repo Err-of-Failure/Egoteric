@@ -1,5 +1,5 @@
 ﻿using Egoteric.Content.Items.Accessories;
-using Egoteric.Content.DamageClasses;
+//using Egoteric.Content.DamageClasses;
 using Egoteric.Content.Rarities;
 using Terraria;
 using Terraria.GameContent.Creative;
