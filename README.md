@@ -8,7 +8,7 @@ To actually start a description:
 This is a Terraria Mod that srives to...
 ## Features
 ##### Checked means implemented, unchecked means being worked on
- - [x] Leveling System
+ - [ ] Leveling System (Technically implemented, but needs to be rewritten)
  - [ ] Upgrade Tree
  - [ ] Story/Lore
  - [ ] New NPCs
@@ -17,11 +17,4 @@ This is a Terraria Mod that srives to...
 
 ## Credits
 - Merricide - Concept Creator, Asset Artist - [GitHub](https://github.com/Merricide)
-- TorchTheDragon - Programmer - [GitHub](https://github.com/TorchTheDragon), [Discord Server](https://discord.gg/XBFqJk7Vtp), [Twitter](https://twitter.com/TorchTheDwagon)
-- magnetic240 - Asset Artist - [GitHub](https://github.com/magnetic240)
-
-<!--
-This is commented just so you can copy-paste/edit the message Azazel, after all, I just want to get your name to appear in the contributors tab
-
-- AzazelKonikai - Asset Artist - [GitHub](https://github.com/AzazelKonikai)
--->
+- TorchTheDragon - Programmer - [GitHub](https://github.com/TorchTheDragon), [Discord Server](https://discord.gg/XBFqJk7Vtp), [Twitter](https://twitter.com/TorchTheDwagon), [YouTube](https://www.youtube.com/@TorchTheDragon)
