@@ -163,17 +163,17 @@ namespace Egoteric.Common.Players
 			}
 			if (EgotericKeybinds.openUI.JustPressed)
             {
-				if (LevelsScreen.Added == false)
+				if (LevelsScreen.Visible == true)
 				{
+                    LevelsScreen.RemoveCharacterImage(LevelsScreen.playerImage);
+                    LevelsScreen.Visible = false;
+                }
+				else if (LevelsScreen.Visible == false)
+				{ 
 					LevelsScreen.AddCharacterImage(Player);
-				}
-				LevelsScreen.Visible = true;
+                    LevelsScreen.Visible = true;
+                }
             }
-			if (EgotericKeybinds.hideUI.JustPressed)
-			{
-				LevelsScreen.RemoveCharacterImage(LevelsScreen.playerImage);
-				LevelsScreen.Visible = false;
-			}
         }
 
         public override void PreUpdate()
