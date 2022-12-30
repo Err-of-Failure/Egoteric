@@ -17,8 +17,8 @@ namespace Egoteric.Content.Projectiles
 
         public override void SetDefaults()
         {
-            Projectile.width = 56;
-            Projectile.height = 74;
+            Projectile.width = 38;
+            Projectile.height = 44;
             Projectile.aiStyle = ProjAIStyleID.ThrownProjectile;
             Projectile.friendly = true;
             Projectile.hostile = false;
@@ -40,8 +40,8 @@ namespace Egoteric.Content.Projectiles
 
         public override void SetDefaults()
         {
-            Projectile.width = 56;
-            Projectile.height = 74;
+            Projectile.width = 38;
+            Projectile.height = 44;
             Projectile.aiStyle = ProjAIStyleID.ThrownProjectile;
             Projectile.friendly = true;
             Projectile.hostile = false;
@@ -63,8 +63,8 @@ namespace Egoteric.Content.Projectiles
 
         public override void SetDefaults()
         {
-            Projectile.width = 56;
-            Projectile.height = 74;
+            Projectile.width = 38;
+            Projectile.height = 44;
             Projectile.aiStyle = ProjAIStyleID.ThrownProjectile;
             Projectile.friendly = true;
             Projectile.hostile = false;
@@ -86,8 +86,8 @@ namespace Egoteric.Content.Projectiles
 
         public override void SetDefaults()
         {
-            Projectile.width = 56;
-            Projectile.height = 74;
+            Projectile.width = 38;
+            Projectile.height = 44;
             Projectile.aiStyle = ProjAIStyleID.ThrownProjectile;
             Projectile.friendly = true;
             Projectile.hostile = false;
