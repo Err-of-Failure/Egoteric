@@ -31,7 +31,7 @@ namespace Egoteric.Content.GUI
 		public Color backgroundColor = Color.Gray;
 		public static Asset<Texture2D> _backgroundTexture;
 
-		public UIFlatPanel(Asset<Texture2D>? texture = null)
+		public UIFlatPanel(Asset<Texture2D> texture = null)
 		{
 			_backgroundTexture = texture;
 			if (_backgroundTexture == null)
@@ -54,7 +54,7 @@ namespace Egoteric.Content.GUI
 		private float height;
 		private Asset<Texture2D> BarTexture;
 
-		public ResourceBar(ResourceBarInfo stat, float width, float height, Asset<Texture2D>? barTexture = null)
+		public ResourceBar(ResourceBarInfo stat, float width, float height, Asset<Texture2D> barTexture = null)
 		{
 			this.stat = stat;
 			this.width = width;
