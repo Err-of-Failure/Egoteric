@@ -43,7 +43,7 @@ namespace Egoteric.Content.Items.StructureCreation
             Item.useStyle = 1;
             Item.useTime = 20;
             Item.useAnimation = 20;
-            Item.rare = ModContent.RarityType<PyxlHigherRarity>();
+            Item.rare = ItemRarityID.Purple;
         }
 
         public override void RightClick(Player player)

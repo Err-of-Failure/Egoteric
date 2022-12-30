@@ -111,7 +111,7 @@ namespace Egoteric.Content.Items.Weapons.Throwables
                     Item.noMelee = true;
                     Item.noUseGraphic = true;
                     Item.shoot = ModContent.ProjectileType<Dots>();
-                    Item.rare = ModContent.RarityType<PyxlHigherRarity>();
+                    Item.rare = ItemRarityID.Purple;
                     if (player.whoAmI == Main.myPlayer)
                     {
                         CombatText.NewText(new Rectangle((int)player.position.X, (int)player.position.Y - 20, player.width, player.height), new Color((byte)(Main.DiscoR), 0, (byte)(Main.DiscoR)), "Dots Pattern!", false, false);
@@ -127,7 +127,7 @@ namespace Egoteric.Content.Items.Weapons.Throwables
                     Item.noMelee = true;
                     Item.noUseGraphic = true;
                     Item.shoot = ModContent.ProjectileType<Superflip>();
-                    Item.rare = ModContent.RarityType<VidiaHigherRarity>();
+                    Item.rare = ItemRarityID.Red;
                     if (player.whoAmI == Main.myPlayer)
                     {
                         CombatText.NewText(new Rectangle((int)player.position.X, (int)player.position.Y - 20, player.width, player.height), new Color((byte)(Main.DiscoR), 0, 0), "Superflip Pattern!", false, false);

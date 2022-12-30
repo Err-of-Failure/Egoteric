@@ -28,14 +28,6 @@ namespace Egoteric.Common.Players
 	public class EgotericPlayer : ModPlayer
 	{
 		/// <summary>
-		/// This tells the current amount of XP a player has stored
-		/// </summary>
-		public int curEXP = 0;
-		/// <summary>
-		/// The player's current level
-		/// </summary>
-		public int curLevel = 1;
-		/// <summary>
 		/// How many skill points the player has availible
 		/// </summary>
 		public int skillPoints = 0;
@@ -43,10 +35,6 @@ namespace Egoteric.Common.Players
 		/// Just used to check for certain algorithms.
 		/// </summary>
 		public int spentSkillPoints = 0;
-		/// <summary>
-		/// Total EXP needed to get to next level
-		/// </summary>
-		public int maxEXP = 100;
 
 		/// <summary>
 		/// What upgrades the player has chosen.
@@ -80,9 +68,6 @@ namespace Egoteric.Common.Players
 
 		public override void SaveData(TagCompound tag)
         {
-			tag["curEXP"] = curEXP;
-			tag["maxEXP"] = maxEXP;
-			tag["curLevel"] = curLevel;
 			tag["skillPoints"] = skillPoints;
 			tag["UpgradePaths"] = UpgradePaths;
 			tag["MoreMinions"] = MoreMinions;
@@ -94,9 +79,6 @@ namespace Egoteric.Common.Players
 
         public override void LoadData(TagCompound tag)
         {
-			curEXP = tag.GetInt("curEXP");
-			maxEXP = tag.GetInt("maxEXP");
-			curLevel = tag.GetInt("curLevel");
 			skillPoints = tag.GetInt("skillPoints");
 			UpgradePaths = tag.GetIntArray("UpgradePaths");
 			MoreMinions = tag.GetInt("MoreMinions");
@@ -104,11 +86,6 @@ namespace Egoteric.Common.Players
 			IncreasedDefense = tag.GetInt("IncreasedDefense");
 			MaxLife = tag.GetInt("MaxLife");
 			base.LoadData(tag);
-
-			if (curEXP > maxEXP)
-			{
-				LevelUp();
-			}
 		}
 
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
@@ -136,7 +113,8 @@ namespace Egoteric.Common.Players
 		}
 
         public override void ProcessTriggers(TriggersSet triggersSet)
-        {
+        {	// Just keeping code to use later
+			/*
             if (EgotericKeybinds.checkCurrentStats.JustPressed)
             {
 				Main.NewText(Player.name + "'s Stats:\n" + "Current XP: " + curEXP + "\nTotal XP needed for next level: " + maxEXP + "\nCurrent Level: " + curLevel + "\nSkill Points Availible: " + skillPoints);
@@ -174,19 +152,11 @@ namespace Egoteric.Common.Players
                     LevelsScreen.Visible = true;
                 }
             }
+			*/
         }
 
         public override void PreUpdate()
         {
-			if (maxEXP != (int)(300 * Math.Pow((0.75 * curLevel), 2)))
-            {
-				maxEXP = (int)(300 * Math.Pow((0.75 * curLevel), 2));
-			}
-			if (curEXP >= maxEXP)
-				LevelUp();
-			if (curEXP < 0)
-				curEXP = 0;
-
 			if (LevelsScreen.Added == true)
 			{
 				if (Player.velocity.X > 0 || Player.velocity.X < 0 || Player.velocity.Y > 0 || Player.velocity.Y < 0)
@@ -201,31 +171,6 @@ namespace Egoteric.Common.Players
 
 			base.PreUpdate();
         }
-
-		public void LevelUp()
-        {
-			curEXP -= maxEXP;
-			curLevel++;
-			Main.NewText("You've leveled up! You are now level " + curLevel + "!", Color.Yellow);
-			skillPoints++;
-			Main.NewText("You currently have " + skillPoints + " skillpoints available!", Color.Blue);
-			if (curEXP < 0)
-				curEXP = 0;
-			if (curEXP >= maxEXP)
-				LevelUp();
-		}
-
-		public void AddXP(int XPToEarn)
-        {
-			curEXP += XPToEarn;
-			if (curEXP >= maxEXP)
-				LevelUp();
-		}
-
-		public void SetXP(float XPToSet)
-        {
-			curEXP = (int)XPToSet;
-		}
 
 		/// <summary>
 		/// <para>The function called upon to spend the skill points a player has</para>
@@ -294,8 +239,6 @@ namespace Egoteric.Common.Players
 			ModPacket packet = Mod.GetPacket();
 			packet.Write((byte)Egoteric.MessageType.SyncPlayer);
 			packet.Write((byte)Player.whoAmI);
-			packet.Write(curEXP);
-			packet.Write(curLevel);
 			packet.Write(skillPoints);
 			packet.Send(toWho, fromWho);
 		}

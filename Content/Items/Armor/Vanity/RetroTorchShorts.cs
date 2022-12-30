@@ -22,8 +22,8 @@ namespace Egoteric.Content.Items.Armor.Vanity
 			Item.height = 16;
 
 			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ModContent.RarityType<VidiaHigherRarity>();
-			Item.vanity = true;
+            Item.rare = ItemRarityID.Red;
+            Item.vanity = true;
 			Item.maxStack = 1;
 		}
 	}

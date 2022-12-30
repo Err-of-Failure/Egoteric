@@ -22,7 +22,7 @@ namespace Egoteric.Content.Items.Armor.Vanity
 			Item.height = 20;
 
 			Item.value = Item.sellPrice(gold: 1);
-			Item.rare = ModContent.RarityType<PyxlHigherRarity>();
+			Item.rare = ItemRarityID.Purple;
 			Item.vanity = true;
 			Item.maxStack = 1;
 		}

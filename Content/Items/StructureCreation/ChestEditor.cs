@@ -30,7 +30,7 @@ namespace Egoteric.Content.Items.StructureCreation
             Item.useStyle = 1;
             Item.useTime = 20;
             Item.useAnimation = 20;
-            Item.rare = ModContent.RarityType<VidiaHigherRarity>();
+            Item.rare = ItemRarityID.Red;
         }
 
         public override bool? UseItem(Player player)

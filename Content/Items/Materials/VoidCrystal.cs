@@ -26,7 +26,7 @@ namespace Egoteric.Content.Items.Materials
             Item.buyPrice(gold: 1, silver: 20);
             Item.maxStack = 999;
 
-            Item.rare = ModContent.RarityType<PyxlBaseRarity>();
+            Item.rare = ItemRarityID.LightPurple;
         }
     }
 }

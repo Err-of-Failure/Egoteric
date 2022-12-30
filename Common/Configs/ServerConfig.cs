@@ -6,7 +6,7 @@ namespace Egoteric.Common.Configs
     /// <summary>
     /// The main config file for Egoteric
     /// </summary>
-    public class MainConfig : ModConfig
+    public class ServerConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
