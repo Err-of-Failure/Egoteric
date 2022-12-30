@@ -63,12 +63,9 @@ namespace Egoteric
             switch (msgType)
             {
                 case MessageType.SyncPlayer:
-                    examplePlayer.curEXP = reader.ReadInt32();
-                    examplePlayer.curLevel = reader.ReadInt32();
                     examplePlayer.skillPoints = reader.ReadInt32();
                     break;
                 case MessageType.XP:
-                    examplePlayer.curEXP = reader.ReadInt32();
                     break;
                 default:
                     Logger.WarnFormat("Egoteric: Unknown Message type: {0}", msgType);
