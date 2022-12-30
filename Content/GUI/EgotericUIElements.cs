@@ -115,7 +115,8 @@ namespace Egoteric.Content.GUI
 			switch (stat)
 			{
 				case ResourceBarInfo.curEXP:
-					quotient = (float)egotericPlayer.curEXP / (float)egotericPlayer.maxEXP;
+					// quotient = (float)egotericPlayer.curEXP / (float)egotericPlayer.maxEXP;
+					quotient = 1 / 2;
 					break;
 
 				default:
@@ -133,7 +134,8 @@ namespace Egoteric.Content.GUI
 			switch (stat)
 			{
 				case ResourceBarInfo.curEXP:
-					text.SetText("" + egotericPlayer.curEXP + " | " + egotericPlayer.maxEXP);
+					// text.SetText("" + egotericPlayer.curEXP + " | " + egotericPlayer.maxEXP);
+					text.SetText("This isn't permanent");
 					break;
 
 				default:
