@@ -21,15 +21,18 @@ namespace Egoteric.Common.Players
             {
                 if (npc.boss)
                 {
-                    XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().BossMultiplier);
+                    // XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().BossMultiplier);
+					XPToEarn = (npc.lifeMax * 1.5f);
                 }
                 else if (!npc.friendly)
                 {
-                    XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().NormalMultiplier);
+                    // XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().NormalMultiplier);
+					XPToEarn = (npc.lifeMax * 1f);
                 }
                 else if (npc.friendly)
                 {
-                    XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().EvilMultiplier);
+                    // XPToEarn = (npc.lifeMax * ModContent.GetInstance<MainConfig>().EvilMultiplier);
+					XPToEarn = (npc.lifeMax * -1f);
                 }
             }
 
